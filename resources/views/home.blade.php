@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || Agrion || Agrion HTML 5 Template </title>
+    <title> Home One || Farmer Buddy  || Farmer Buddy  HTML 5 Template </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Agrion HTML 5 Template " />
+    <meta name="description" content="Farmer Buddy  HTML 5 Template " />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -69,35 +69,10 @@
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
                     <div class="main-header__logo">
-                        <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
+                        <a href=" "><img src="assets/images/resources/logo-1.png" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
-                        <div class="main-header__menu-box-top">
-                            <ul class="list-unstyled main-header__contact-list">
-                                <li>
-                                    <div class="icon">
-                                        <i class="icon-email"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <i class="icon-pin"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>80 Broklyn Golden Street USA</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="main-header__social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+                        
                         <div class="main-header__menu-box-bottom">
                             <nav class="main-menu">
                                 <div class="main-menu__wrapper">
@@ -107,127 +82,11 @@
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
                                                     <li class="dropdown current megamenu">
-                                                        <a href="index.html">Home </a>
-                                                        <ul>
-                                                            <li>
-                                                                <section class="home-showcase">
-                                                                    <div class="container">
-                                                                        <div class="home-showcase__inner">
-                                                                            <div class="row">
-                                                                                <div class="col-lg-3">
-                                                                                    <div class="home-showcase__item">
-                                                                                        <div
-                                                                                            class="home-showcase__image">
-                                                                                            <img src="assets/images/home-showcase/home-showcase-1-1.jpg"
-                                                                                                alt="">
-                                                                                            <div
-                                                                                                class="home-showcase__buttons">
-                                                                                                <a href="index.html"
-                                                                                                    class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                    Page</a>
-                                                                                                <a href="index-one-page.html"
-                                                                                                    class="thm-btn home-showcase__buttons__item">One
-                                                                                                    Page</a>
-                                                                                            </div>
-                                                                                            <!-- /.home-showcase__buttons -->
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__image -->
-                                                                                        <h3
-                                                                                            class="home-showcase__title">
-                                                                                            Home
-                                                                                            page
-                                                                                            01</h3>
-                                                                                        <!-- /.home-showcase__title -->
-                                                                                    </div><!-- /.home-showcase__item -->
-                                                                                </div><!-- /.col-lg-3 -->
-                                                                                <div class="col-lg-3">
-                                                                                    <div class="home-showcase__item">
-                                                                                        <div
-                                                                                            class="home-showcase__image">
-                                                                                            <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
-                                                                                                alt="">
-                                                                                            <div
-                                                                                                class="home-showcase__buttons">
-                                                                                                <a href="index2.html"
-                                                                                                    class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                    Page</a>
-                                                                                                <a href="index2-one-page.html"
-                                                                                                    class="thm-btn home-showcase__buttons__item">One
-                                                                                                    Page</a>
-                                                                                            </div>
-                                                                                            <!-- /.home-showcase__buttons -->
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__image -->
-                                                                                        <h3
-                                                                                            class="home-showcase__title">
-                                                                                            Home
-                                                                                            page
-                                                                                            02
-                                                                                        </h3>
-                                                                                        <!-- /.home-showcase__title -->
-                                                                                    </div><!-- /.home-showcase__item -->
-                                                                                </div><!-- /.col-lg-3 -->
-                                                                                <div class="col-lg-3">
-                                                                                    <div class="home-showcase__item">
-                                                                                        <div
-                                                                                            class="home-showcase__image">
-                                                                                            <img src="assets/images/home-showcase/home-showcase-1-3.jpg"
-                                                                                                alt="">
-                                                                                            <div
-                                                                                                class="home-showcase__buttons">
-                                                                                                <a href="index3.html"
-                                                                                                    class="thm-btn home-showcase__buttons__item">Multi
-                                                                                                    Page</a>
-                                                                                                <a href="index3-one-page.html"
-                                                                                                    class="thm-btn home-showcase__buttons__item">One
-                                                                                                    Page</a>
-                                                                                            </div>
-                                                                                            <!-- /.home-showcase__buttons -->
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__image -->
-                                                                                        <h3
-                                                                                            class="home-showcase__title">
-                                                                                            Home
-                                                                                            page
-                                                                                            03
-                                                                                        </h3>
-                                                                                        <!-- /.home-showcase__title -->
-                                                                                    </div><!-- /.home-showcase__item -->
-                                                                                </div><!-- /.col-lg-3 -->
-                                                                                <div class="col-lg-3">
-                                                                                    <div class="home-showcase__item">
-                                                                                        <div
-                                                                                            class="home-showcase__image">
-                                                                                            <img src="assets/images/home-showcase/home-showcase-1-4.jpg"
-                                                                                                alt="">
-                                                                                            <div
-                                                                                                class="home-showcase__buttons">
-                                                                                                <a href="index-dark.html"
-                                                                                                    class="thm-btn home-showcase__buttons__item">View
-                                                                                                    Page</a>
-                                                                                            </div>
-                                                                                            <!-- /.home-showcase__buttons -->
-                                                                                        </div>
-                                                                                        <!-- /.home-showcase__image -->
-                                                                                        <h3
-                                                                                            class="home-showcase__title">
-                                                                                            Home
-                                                                                            page
-                                                                                            04
-                                                                                        </h3>
-                                                                                        <!-- /.home-showcase__title -->
-                                                                                    </div><!-- /.home-showcase__item -->
-                                                                                </div><!-- /.col-lg-3 -->
-                                                                            </div><!-- /.row -->
-                                                                        </div><!-- /.home-showcase__inner -->
-
-                                                                    </div><!-- /.container -->
-                                                                </section>
-                                                            </li>
-                                                        </ul>
+                                                        <a href=" ">Home </a>
+                                                        
                                                     </li>
                                                     <li>
-                                                        <a href="about.html">About</a>
+                                                        <a href="/about">About</a>
                                                     </li>
                                                     <li class="dropdown">
                                                         <a href="#">Services</a>
@@ -372,7 +231,7 @@
                                         <p class="main-slider__sub-title">We are Producing Natural Products</p>
                                         <h2 class="main-slider__title">Agriculture.</h2>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
+                                            <a href="/about" class="thm-btn main-slider__btn">Discover More <i
                                                     class="icon-right-arrow"></i> </a>
                                         </div>
                                     </div>
@@ -392,7 +251,7 @@
                                         <p class="main-slider__sub-title">We are Producing Natural Products</p>
                                         <h2 class="main-slider__title">Agriculture.</h2>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
+                                            <a href="/about" class="thm-btn main-slider__btn">Discover More <i
                                                     class="icon-right-arrow"></i> </a>
                                         </div>
                                     </div>
@@ -495,23 +354,23 @@
                     <div class="col-xl-6">
                         <div class="about-one__left">
                             <div class="text-left section-title">
-                                <span class="section-title__tagline">Get to Know Agrion</span>
-                                <h2 class="section-title__title">Agrion is the Agriculture and Organic farm</h2>
+                                <span class="section-title__tagline">Get to Know Farmer Buddy </span>
+                                <h2 class="section-title__title">Farmer Buddy is the Agriculture management system</h2>
                                 <div class="section-title__icon">
                                     <img src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
                             </div>
                             <p class="about-one__text-1">We’ve 20 years of agriculture farming experience.</p>
-                            <p class="about-one__text-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim dolore
-                                veniam.</p>
+                            <p class="about-one__text-2">A farmer management service is a platform or system designed to help farmers efficiently manage their operations and resources. It typically includes features such as crop planning, inventory management, financial tracking, equipment maintenance, and workforce scheduling. These services can be provided through software applications or online platforms, allowing farmers to access and update information from anywhere, at any time. By streamlining various aspects of farm management, these services help farmers optimize their productivity, reduce costs, and make better-informed decisions to improve overall profitability.
+
+                            </p>
                             <ul class="list-unstyled about-one__points">
                                 <li>
                                     <div class="icon">
                                         <span class="icon-tick"></span>
                                     </div>
                                     <div class="text">
-                                        <p>There are many variations of passage of lorem.</p>
+                                        <p>There are many variations of passage of agricultures.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -525,7 +384,7 @@
                             </ul>
                             <div class="about-one__btn-and-ceo">
                                 <div class="about-one__btn-box">
-                                    <a href="about.html" class="thm-btn about-one__btn">About More <i
+                                    <a href="/about" class="thm-btn about-one__btn">About More <i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                                 <div class="about-one__ceo">
@@ -534,7 +393,7 @@
                                     </div>
                                     <div class="about-one__ceo-content">
                                         <h4 class="about-one__ceo-name">Mike Hardson</h4>
-                                        <p class="about-one__ceo-title">CEO of Agrion</p>
+                                        <p class="about-one__ceo-title">CEO of Farmer Buddy</p>
                                     </div>
                                 </div>
                             </div>
@@ -593,7 +452,7 @@
                             <div class="services-one__content">
                                 <h3 class="services-one__title"><a href="agriculture-products.html">Agriculture <br>
                                         Products</a></h3>
-                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
+                                <p class="services-one__text">I was impresed by the farmer buddy  services, not lorem ipsum is
                                     simply free text.</p>
                             </div>
                         </div>
@@ -613,7 +472,7 @@
                             <div class="services-one__content">
                                 <h3 class="services-one__title"><a href="organic-products.html">Organic
                                         <br> Products</a></h3>
-                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
+                                <p class="services-one__text">I was impresed by the Farmer Buddy  services, not lorem ipsum is
                                     simply free text.</p>
                             </div>
                         </div>
@@ -633,7 +492,7 @@
                             <div class="services-one__content">
                                 <h3 class="services-one__title"><a href="fresh-vegetables.html">Fresh
                                         <br> Vegetables</a></h3>
-                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
+                                <p class="services-one__text">I was impresed by the farmer_buddy  services, not lorem ipsum is
                                     simply free text.</p>
                             </div>
                         </div>
@@ -653,7 +512,7 @@
                             <div class="services-one__content">
                                 <h3 class="services-one__title"><a href="dairy-products.html">Dairy <br> Products</a>
                                 </h3>
-                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
+                                <p class="services-one__text">I was impresed by the farmer_buddy services, not lorem ipsum is
                                     simply free text.</p>
                             </div>
                         </div>
@@ -753,7 +612,7 @@
                         <h3 class="unbeatable-one__title">Unbeatable Organic and
                             <br> Agriculture Services</h3>
                         <div class="unbeatable-one__btn-box">
-                            <a href="about.html" class="thm-btn unbeatable-one__btn">Discover More <i
+                            <a href="/about" class="thm-btn unbeatable-one__btn">Discover More <i
                                     class="icon-right-arrow"></i> </a>
                         </div>
                     </div>
@@ -785,9 +644,7 @@
                                     <img src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
                             </div>
-                            <p class="healthy-food-one__text">Lorem ipsum dolor sit amet nsectetur cing elit. Suspe
-                                ndisse suscipit sagittis leo sit met entum estibu dignissim posuere cubilia durae. Leo
-                                sit met entum cubilia crae onec.</p>
+                            <p class="healthy-food-one__text">"Healthy Food for Your Good Growth" is an essential component of an agricultural management system, highlighting the significance of farming nutritious crops for long-term growth and development. Farmers may help customers by prioritizing the cultivation of nutritious, nutrient-rich produce while also optimizing their own farming methods. This strategy entails using modern techniques and technology to improve crop quality and output while simultaneously encouraging ecologically friendly farming practices. Agriculture management systems can help to promote a sustainable agricultural ecosystem that benefits both farmers and customers by implementing effective management tactics and committing to creating nutritious food.</p>
                             <ul class="list-unstyled healthy-food-one__list">
                                 <li class="healthy-food-one__single">
                                     <div class="healthy-food-one__content">
@@ -1419,139 +1276,7 @@
         <!--Cta One End-->
 
         <!--Site Footer Start-->
-        <footer class="site-footer">
-            <div class="site-footer__top">
-                <div class="container">
-                    <div class="site-footer__top-inner">
-                        <div class="site-footer-shape-1 float-bob-x"
-                            style="background-image: url(assets/images/shapes/site-footer-shape-1.png);"></div>
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                                <div class="footer-widget__column footer-widget__about">
-                                    <div class="footer-widget__logo">
-                                        <a href="index.html"><img src="assets/images/resources/footer-logo.png"
-                                                alt=""></a>
-                                    </div>
-                                    <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Welcome to our Agriculture Farming. Lorem
-                                            simply text amet cing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                                <div class="footer-widget__column footer-widget__Explore">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Explore</h3>
-                                    </div>
-                                    <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget__column footer-widget__news">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
-                                    </div>
-                                    <ul class="footer-widget__news-list list-unstyled">
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img src="assets/images/resources/footer-widget-news-img-1.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Organic Food
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img src="assets/images/resources/footer-widget-news-img-2.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Organic Food
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                                <div class="footer-widget__column footer-widget__Contact">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">Contact</h3>
-                                    </div>
-                                    <ul class="footer-widget__Contact-list list-unstyled">
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fas fa-phone-square-alt"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="tel:9200886823">+92 (0088) 6823</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fas fa-envelope"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="icon-pin"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>80 Broklyn Golden Street. USA</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <form class="footer-widget__Contact-form">
-                                        <div class="footer-widget__Contact-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
-                                            <button type="submit" class="footer-widget__Contact-btn"><i
-                                                    class="icon-right-arrow"></i></button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="site-footer__bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">Agrion.com</a></p>
-                                <div class="site-footer__social">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <div class="site-footer__bottom-scroll">
-                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
-                                            class="icon-up-arrow"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--Site Footer End-->
+        @include('inc.footer')
 
 
     </div><!-- /.page-wrapper -->
