@@ -65,127 +65,7 @@
 
 
     <div class="page-wrapper">
-        <header class="main-header">
-            <div class="main-header__wrapper">
-                <div class="main-header__wrapper-inner">
-                    <div class="main-header__logo">
-                        <a href=" "><img src="assets/images/resources/logo-1.png" alt=""></a>
-                    </div>
-                    <div class="main-header__menu-box">
-                        
-                        <div class="main-header__menu-box-bottom">
-                            <nav class="main-menu">
-                                <div class="main-menu__wrapper">
-                                    <div class="main-menu__wrapper-inner">
-                                        <div class="main-menu__left">
-                                            <div class="main-menu__main-menu-box">
-                                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                                <ul class="main-menu__list">
-                                                    <li class="dropdown megamenu">
-                                                        <a href=" /">Home </a>
-                                                        
-                                                    </li>
-                                                    <li class="current">
-                                                        <a href="/about">About</a>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Services</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="services.html">Services</a>
-                                                            </li>
-                                                            <li><a href="services-carousel.html">Services Carousel</a>
-                                                            </li>
-                                                            <li><a href="agriculture-products.html">Agriculture
-                                                                    Products</a></li>
-                                                            <li><a href="organic-products.html">Organic Products</a>
-                                                            </li>
-                                                            <li><a href="fresh-vegetables.html">Fresh Vegetables</a>
-                                                            </li>
-                                                            <li><a href="dairy-products.html">Dairy Products</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Projects</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="project-01.html">Projects 01</a></li>
-                                                            <li><a href="project-02.html">Projects 02</a></li>
-                                                            <li><a href="project-carousel.html">Project Carousel</a>
-                                                            </li>
-                                                            <li><a href="project-details.html">Project Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Pages</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="farmers.html">Farmers</a></li>
-                                                            <li><a href="farmers-carousel.html">Farmers Carousel</a>
-                                                            </li>
-                                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                                            <li><a href="testimonials-carousel.html">Testimonial
-                                                                    Carousel</a></li>
-                                                            <li><a href="faq.html">FAQs</a></li>
-                                                            <li><a href="404.html">404 Error</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Blog</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="blog.html">Blog</a></li>
-                                                            <li><a href="blog-carousel.html">Blog Carousel</a></li>
-                                                            <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Shop</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="products.html">Products</a></li>
-                                                            <li><a href="product-details.html">Product Details</a></li>
-                                                            <li><a href="cart.html">Cart</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="contact.html">Contact</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="main-menu__right">
-                                            <div class="main-menu__search-cart-btn-box">
-                                                <div class="main-menu__search-box">
-                                                    <a href="#"
-                                                        class="main-menu__search search-toggler icon-magnifying-glass"></a>
-                                                </div>
-                                                <div class="main-menu__cart-box">
-                                                    <a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
-                                                </div>
-                                                <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
-                                                        <i class="icon-right-arrow"></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="main-header__phone-contact-box">
-                        <div class="main-header__phone-number">
-                            <a href="tel:9200886823">+92 (0088) 6823</a>
-                        </div>
-                        <div class="main-header__call-box">
-                            <div class="main-header__call-inner">
-                                <div class="main-header__call-icon">
-                                    <span class="fas fa-phone"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        @include('inc.nav')
 
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
@@ -464,7 +344,7 @@
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="farmers.html">Aleesha Brown</a></h3>
+                                <h3 class="team-one__title"><a href="/expert">Aleesha Brown</a></h3>
                                 <p class="team-one__subtitle">Senior Expert</p>
                             </div>
                         </div>
@@ -502,7 +382,7 @@
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="farmers.html">Kevin Martin</a></h3>
+                                <h3 class="team-one__title"><a href="/expert">Kevin Martin</a></h3>
                                 <p class="team-one__subtitle">Senior Expert</p>
                             </div>
                         </div>
@@ -540,7 +420,7 @@
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="farmers.html">Sarah Albert</a></h3>
+                                <h3 class="team-one__title"><a href="/expert">Sarah Albert</a></h3>
                                 <p class="team-one__subtitle">Senior Expert</p>
                             </div>
                         </div>
