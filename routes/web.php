@@ -6,6 +6,15 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ExpertController;
+use App\Http\Controllers\WeatherController;
+
+use App\Http\Controllers\SoilController;
+use App\Http\Controllers\FieldController;
+use App\Http\Controllers\SeasonController;
+use App\Http\Controllers\WaterSourceController;
+use App\Http\Controllers\WaterUsageController;
+use App\Http\Controllers\LocationController;
+use App\Http\Controllers\CropController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +44,80 @@ Route::get('/chat{key?}',Main::class)->name('chat');
 // Route::get("/deleteUser/{id}",[AdminController::class,"deleteUser"]);
 
 //about us
+
+// weather
+// Route::get('/weather',[WeatherController::class, "index"])->('weather.form');
+Route::match(["get","post"],"weather",[WeatherController::class, "index"])->name("weather.form");
+
+// soil managemnet
+Route::get('/soils', [SoilController::class, 'index'])->name('soil_list');
+//add-edit-delete
+Route::post('/add_soil_action', [SoilController::class, 'store'])->name('soil_add_action');
+Route::get('/add_soil', [SoilController::class, 'add_soil'])->name('soil_add');
+Route::get('/view_soil{id}', [SoilController::class, 'view_soil'])->name('view_soil');
+Route::get('/edit_soil{id}', [SoilController::class, 'edit_soil'])->name('edit_soil');
+Route::post('/update_soil', [SoilController::class, 'update'])->name('update_soil');
+Route::get('/delete_soil/{id}', [SoilController::class, 'destroy'])->name('delete_soil');
+
+
+// field
+Route::get('/fields', [FieldController::class, 'index'])->name('field_list');
+//add-edit-delete
+Route::post('/add_field_action', [FieldController::class, 'store'])->name('field_add_action');
+Route::get('/add_field', [FieldController::class, 'add_field'])->name('field_add');
+Route::get('/view_field{id}', [FieldController::class, 'view_field'])->name('view_field');
+Route::get('/edit_field{id}', [FieldController::class, 'edit_field'])->name('edit_field');
+Route::post('/update_field', [FieldController::class, 'update'])->name('update_field');
+Route::get('/delete_field/{id}', [FieldController::class, 'destroy'])->name('delete_field');
+
+// season managemnet
+Route::get('/seasons', [SeasonController::class, 'index'])->name('season_list');
+//add-edit-delete
+Route::post('/add_season_action', [SeasonController::class, 'store'])->name('season_add_action');
+Route::get('/add_season', [SeasonController::class, 'add_season'])->name('season_add');
+Route::get('/view_season{id}', [SeasonController::class, 'view_season'])->name('view_season');
+Route::get('/edit_season{id}', [SeasonController::class, 'edit_season'])->name('edit_season');
+Route::post('/update_season', [SeasonController::class, 'update'])->name('update_season');
+Route::get('/delete_season/{id}', [SeasonController::class, 'destroy'])->name('delete_season');
+
+// waterSource 
+Route::get('/waterSources', [WaterSourceController::class, 'index'])->name('waterSource_list');
+//add-edit-delete
+Route::post('/add_waterSource_action', [WaterSourceController::class, 'store'])->name('waterSource_add_action');
+Route::get('/add_waterSource', [WaterSourceController::class, 'add_waterSource'])->name('waterSource_add');
+Route::get('/view_waterSource{id}', [WaterSourceController::class, 'view_waterSource'])->name('view_waterSource');
+Route::get('/edit_waterSource{id}', [WaterSourceController::class, 'edit_waterSource'])->name('edit_waterSource');
+Route::post('/update_waterSource', [WaterSourceController::class, 'update'])->name('update_waterSource');
+Route::get('/delete_waterSource/{id}', [WaterSourceController::class, 'destroy'])->name('delete_waterSource');
+
+// waterUsage 
+Route::get('/waterUsages', [WaterUsageController::class, 'index'])->name('waterUsage_list');
+//add-edit-delete
+Route::post('/add_waterUsage_action', [WaterUsageController::class, 'store'])->name('waterUsage_add_action');
+Route::get('/add_waterUsage', [WaterUsageController::class, 'add_waterUsage'])->name('waterUsage_add');
+Route::get('/view_waterUsage{id}', [WaterUsageController::class, 'view_waterUsage'])->name('view_waterUsage');
+Route::get('/edit_waterUsage{id}', [WaterUsageController::class, 'edit_waterUsage'])->name('edit_waterUsage');
+Route::post('/update_waterUsage', [WaterUsageController::class, 'update'])->name('update_waterUsage');
+Route::get('/delete_waterUsage/{id}', [WaterUsageController::class, 'destroy'])->name('delete_waterUsage');
+
+//location
+Route::get('/locations', [LocationController::class, 'index'])->name('location_list');
+Route::post('/add_location_action', [LocationController::class, 'store'])->name('location_add_action');
+Route::get('/add_location', [LocationController::class, 'add_location'])->name('location_add');
+Route::get('/view_location{id}', [LocationController::class, 'view_location'])->name('view_location');
+Route::get('/edit_location{id}', [LocationController::class, 'edit_location'])->name('edit_location');
+Route::post('/update_location', [LocationController::class, 'update'])->name('update_location');
+Route::get('/delete_location/{id}', [LocationController::class, 'destroy'])->name('delete_location');
+
+//crop
+Route::get('/crops', [CropController::class, 'index'])->name('crop_list');
+Route::post('/add_crop_action', [CropController::class, 'store'])->name('crop_add_action');
+Route::get('/add_crop', [CropController::class, 'add_crop'])->name('crop_add');
+Route::get('/view_crop{id}', [CropController::class, 'view_crop'])->name('view_crop');
+Route::get('/edit_crop{id}', [CropController::class, 'edit_crop'])->name('edit_crop');
+Route::post('/update_crop', [CropController::class, 'update'])->name('update_crop');
+Route::get('/delete_crop/{id}', [CropController::class, 'destroy'])->name('delete_crop');
+
 
 
 

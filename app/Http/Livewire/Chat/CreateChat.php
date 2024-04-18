@@ -26,11 +26,21 @@ class CreateChat extends Component
 
      // dd(no conversation);
 
-            $createdConversation= Conversation::create(['receiver_id'=>$receiverId,'sender_id'=>auth()->user()->id,'last_time_message'=>0]);
-          /// conversation created 
+        //     $createdConversation= Conversation::create(['receiver_id'=>$receiverId,'sender_id'=>auth()->user()->id,'last_time_message'=>0]);
+        $createdConversation = Conversation::create([
+            'receiver_id' => $receiverId,
+            'sender_id' => auth()->user()->id,
+            'last_time_message' => now(), // Set to current datetime
+        ]);
+        //   /// conversation created 
 
-            $createdMessage= Message::create(['conversation_id'=>$createdConversation->id,'sender_id'=>auth()->user()->id,'receiver_id'=>$receiverId,'body'=>$this->message]);
-
+            // $createdMessage= Message::create(['conversation_id'=>$createdConversation->id,'sender_id'=>auth()->user()->id,'receiver_id'=>$receiverId,'body'=>$this->message]);
+            $createdMessage = Message::create([
+                'conversation_id' => $createdConversation->id,
+                'sender_id' => auth()->user()->id,
+                'receiver_id' => $receiverId,
+                'body' => $this->message
+            ]);
 
         $createdConversation->last_time_message= $createdMessage->created_at;
         $createdConversation->save();

@@ -75,12 +75,12 @@
                                                 </li>
                                                 @else
                                                 <li>
-                                                    <a class="btn btn-success" href="{{ url('login') }}">Login</a>
+                                                    <a href="{{ url('login') }}">Login</a>
                                                 </li>
                                             
                                                 @if (Route::has('register'))
                                                 <li>
-                                                    <a class="btn btn-primary" href="{{ url('register') }}">Register</a>
+                                                    <a  href="{{ url('register') }}">Register</a>
                                                 </li>
                                                 @endif
                                             @endauth
