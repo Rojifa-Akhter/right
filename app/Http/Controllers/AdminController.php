@@ -5,17 +5,33 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
+use Illuminate\Support\Facades\Auth;
+
+
 class AdminController extends Controller
 {
-    public function user()
+    public function index()
     {
-        $data=user::all();
-        return view("admin.users", compact("data"));
+       if (Auth::id())
+        {
+        $usertype= Auth()->user()->usertype;
+
+        if($usertype == 'user'){
+            return view('dashboard');
+        }
+        else if($usertype == 'admin'){
+            return view('admin.index');
+        }
+        else
+        {
+            return redirect()->back();
+        }
+
+       }
     }
-    public function deleteUser($id)
+    public function home()
     {
-        $data=user::find($id);
-        $data->delete();
-        return redirect()->back();
+        return view('home.index');
     }
+   
 }

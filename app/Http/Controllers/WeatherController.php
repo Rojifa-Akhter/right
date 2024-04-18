@@ -2,20 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Expert;
+use App\Models\Weather;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
-class ExpertController extends Controller
+class WeatherController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function expert()
+    public function index(Request $request)
     {
-        return view("expert");
-    
+        $weatherResponse = [];
+        if($request->isMethod("post")){
+            // echo "<h1>Sorm Submitted</h1>";
+            // die;
+            $cityName = $request->city;
+
+           $response = Http::withHeaders([
+                "X-RapidAPI-Host" =>"open-weather13.p.rapidapi.com",
+                "X-RapidAPI-Key" =>"56578b843amsh28b343a3f1ffd68p1d11acjsnb6a0a0d32ccc"
+            ])->get("https://open-weather13.p.rapidapi.com/city/{$cityName}");
+            // echo "<pre>";
+
+            // print_r($response->json());
+            $weatherResponse = $response->json();
+        }
+        return view("weather",[
+            "data" => $weatherResponse]);
     }
 
     /**
@@ -42,10 +58,10 @@ class ExpertController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Expert  $expert
+     * @param  \App\Models\Weather  $weather
      * @return \Illuminate\Http\Response
      */
-    public function show(Expert $expert)
+    public function show(Weather $weather)
     {
         //
     }
@@ -53,10 +69,10 @@ class ExpertController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Expert  $expert
+     * @param  \App\Models\Weather  $weather
      * @return \Illuminate\Http\Response
      */
-    public function edit(Expert $expert)
+    public function edit(Weather $weather)
     {
         //
     }
@@ -65,10 +81,10 @@ class ExpertController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Expert  $expert
+     * @param  \App\Models\Weather  $weather
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Expert $expert)
+    public function update(Request $request, Weather $weather)
     {
         //
     }
@@ -76,10 +92,10 @@ class ExpertController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Expert  $expert
+     * @param  \App\Models\Weather  $weather
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Expert $expert)
+    public function destroy(Weather $weather)
     {
         //
     }

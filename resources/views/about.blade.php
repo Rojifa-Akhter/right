@@ -420,7 +420,7 @@
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="/expert">Sarah Albert</a></h3>
+                                <h3 class="team-one__title"><a href="expert">Sarah Albert</a></h3>
                                 <p class="team-one__subtitle">Senior Expert</p>
                             </div>
                         </div>
@@ -440,7 +440,7 @@
                     <div class="col-xl-4">
                         <div class="testimonial-three__left">
                             <div class="text-left section-title">
-                                <span class="section-title__tagline">Our Testimonials</span>
+                                <span class="section-title__tagline">Our Riviews</span>
                                 <h2 class="section-title__title">What They’re taking about farmer buddy</h2>
                                 <div class="section-title__icon">
                                     <img src="assets/images/icon/section-title-icon-1.png" alt="">
@@ -476,9 +476,10 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">
+                                                Sarah has been an outstanding participant in the Farmer Buddy project. 
+                                                He actively communicates with his designated buddy, offering insights and 
+                                                experiences from his farm.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="">
@@ -491,7 +492,7 @@
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
                                                 <h4 class="testimonial-one__client-name">Sarah Albert</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <p class="testimonial-one__client-sub-title">farmer</p>
                                             </div>
                                         </div>
                                     </div>
@@ -501,9 +502,10 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">
+                                                Kevin has demonstrated tremendous enthusiasm and dedication to the 
+                                                Farmer Buddy project. He actively seeks advise from his friend and 
+                                                applies suggested tactics to his farm. </p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-2.jpg" alt="">
@@ -516,7 +518,7 @@
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
                                                 <h4 class="testimonial-one__client-name">Kevin Martin</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <p class="testimonial-one__client-sub-title">farmer</p>
                                             </div>
                                         </div>
                                     </div>
@@ -526,9 +528,8 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">Aleesha has been a consistent participant in the Farmer Buddy project.
+                                                 She communicates successfully with his buddy and is open about her farm troubles and triumphs.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-3.jpg" alt="">
@@ -541,7 +542,7 @@
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
                                                 <h4 class="testimonial-one__client-name">Aleesha Brown</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <p class="testimonial-one__client-sub-title">farmer</p>
                                             </div>
                                         </div>
                                     </div>
@@ -551,9 +552,8 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">Mike has been an invaluable contributor in the Farmer Buddy project.
+                                                 He actively communicates with his buddy and is open to feedback and suggestions.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-4.jpg" alt="">
@@ -566,7 +566,7 @@
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
                                                 <h4 class="testimonial-one__client-name">Mike Hardson</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <p class="testimonial-one__client-sub-title">farmer</p>
                                             </div>
                                         </div>
                                     </div>
@@ -576,9 +576,9 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">Jolie has taken part in the Farmer Buddy initiative with enthusiasm.
+                                                 He keeps in touch with her friend on a regular basis and asks for assistance on many facets of 
+                                                 farm management. </p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-5.jpg" alt="">
@@ -591,7 +591,7 @@
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
                                                 <h4 class="testimonial-one__client-name">Jolie Michale</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <p class="testimonial-one__client-sub-title">farmer</p>
                                             </div>
                                         </div>
                                     </div>
@@ -601,9 +601,9 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text">David has taken an active part in the Farmer Buddy initiative. 
+                                                He stays in regular contact with her friend and asks for assistance on several facets of 
+                                                farm management.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-6.jpg" alt="">
@@ -616,7 +616,7 @@
                                         <div class="testimonial-one__client-details-box">
                                             <div class="testimonial-one__client-details">
                                                 <h4 class="testimonial-one__client-name">David Smith</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
+                                                <p class="testimonial-one__client-sub-title">farmer</p>
                                             </div>
                                         </div>
                                     </div>

@@ -4,10 +4,28 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                
+                <div class="flex items-center shrink-0">
+                    <a href="{{ route('dashboard') }}">
+                        <x-jet-application-mark class="block w-auto h-9" />
+                    </a>
+                </div>
 
                 <!-- Navigation Links -->
-                
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('users') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('chat') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('chat') }}
+                    </x-jet-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
