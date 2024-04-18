@@ -31,6 +31,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[AdminController::class,'home']);
+// Route::get('/field_list',[AdminController::class,'home']);
+// Route::get('/soil_list',[AdminController::class,'home']);
+
+
 
 //home
 Route::get('/home',[AdminController::class,'index']);
