@@ -20,13 +20,15 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic-collapse" aria-expanded="false" aria-controls="ui-basic-collapse">
               <i class="icon-disc menu-icon"></i>
-              <span class="menu-title">UI Elements</span>
+              <span class="menu-title">Elements</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic-collapse">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">Field</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('fields') }}">Field</a></li>
+                <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Season</a></li>
                 <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Soil</a></li>
+
               </ul>
             </div>
           </li>

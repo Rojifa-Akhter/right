@@ -1,40 +1,21 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Field</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-    body {
-        margin-bottom: 60px;
-        /* Height of the footer */
-    }
-
-    .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
-        /* Height of the footer */
-        background-color: #f5f5f5;
-    }
-
-    p.card-text {
-        margin-top: -10px;
-    }
-    </style>
+  @include('admin.css')
 </head>
-
 <body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    @include('admin.nav')
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+     @include('admin.sidebar')
+      <!-- partial -->
+      {{-- {{ print_r($data) }} --}}
 
-    {{-- {{ print_r($data) }} --}}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Field</a>
-        </div>
-    </nav>
 
     <div class="container">
         <h1 class="mt-5 mb-4">Field List</h1>
@@ -89,14 +70,13 @@
        
     </div>
     <br><br>
-    <footer class="footer">
-        <div class="container">
-            <span class="text-muted">© 2024 Field. All rights reserved.</span>
-        </div>
-    </footer>
-    
-        
-    </script>
+
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+@include('admin.footer')
 </body>
 
 </html>
