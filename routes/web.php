@@ -33,6 +33,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[AdminController::class,'home']);
 Route::get('/viewExpert',[AdminController::class,'viewExpert']);
 Route::post('/uploadExpert',[AdminController::class,'uploadExpert']);
+Route::get('/updateExpert/{id}',[AdminController::class,'updateExpert']);
+Route::post('/updateAgriExpert/{id}',[AdminController::class,'updateAgriExpert']);
+Route::get('/deleteExpert/{id}', [AdminController::class, 'deleteExpert']);
+
+
 // Route::get('/soil_list',[AdminController::class,'home']);
 
 //about
