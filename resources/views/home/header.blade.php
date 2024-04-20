@@ -2,7 +2,7 @@
   <div class="main-header__wrapper">
       <div class="main-header__wrapper-inner">
           <div class="main-header__logo">
-              <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
+              <a href="{{ url('home.index') }}"><img src="assets/images/resources/logo-1.png" alt=""></a>
           </div>
           <div class="main-header__menu-box">
               <div class="main-header__menu-box-bottom">
@@ -17,7 +17,7 @@
                                               <a href=" ">Home </a>
                                           </li>
                                           <li>
-                                              <a href="about.html">About</a>
+                                              <a href="{{ url('about') }}">About</a>
                                           </li>
                                           <li class="dropdown">
                                               <a href="#">Services</a>
@@ -39,7 +39,7 @@
                                           <li class="dropdown">
                                               <a href="#">Pages</a>
                                               <ul class="shadow-box">
-                                                  <li><a href="farmers.html">Farmers</a></li>
+                                                  <li><a href="{{ url('expert') }}">Expert</a></li>
                                                   <li><a href="farmers-carousel.html">Farmers Carousel</a>
                                                   </li>
                                                   <li><a href="testimonials.html">Testimonials</a></li>

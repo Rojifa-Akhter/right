@@ -117,7 +117,7 @@
                             </ul>
                             <div class="about-one__btn-and-ceo">
                                 <div class="about-one__btn-box">
-                                    <a href="about.html" class="thm-btn about-one__btn">About More <i
+                                    <a href="{{ url('home.about') }}" class="thm-btn about-one__btn">About More <i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                                 <div class="about-one__ceo">
@@ -181,7 +181,7 @@
                         <h3 class="unbeatable-one__title">Unbeatable Organic and
                             <br> Agriculture Services</h3>
                         <div class="unbeatable-one__btn-box">
-                            <a href="about.html" class="thm-btn unbeatable-one__btn">Discover More <i
+                            <a href="{{ url('home.about') }}" class="thm-btn unbeatable-one__btn">Discover More <i
                                     class="icon-right-arrow"></i> </a>
                         </div>
                     </div>
@@ -347,7 +347,7 @@
                                                     <textarea name="message" placeholder="Write a Message"></textarea>
                                                 </div>
                                                 <div class="contact-one__btn-box">
-                                                    <a href="about.html" class="thm-btn contact-one__btn">Send a Message
+                                                    <a href="{{ url('home.about') }}" class="thm-btn contact-one__btn">Send a Message
                                                         <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
@@ -381,7 +381,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="122"
+                <a href="{{ url('home.index') }}" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="122"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->

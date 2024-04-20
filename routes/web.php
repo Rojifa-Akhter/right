@@ -31,8 +31,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[AdminController::class,'home']);
-// Route::get('/field_list',[AdminController::class,'home']);
+Route::get('/viewExpert',[AdminController::class,'viewExpert']);
+Route::post('/uploadExpert',[AdminController::class,'uploadExpert']);
 // Route::get('/soil_list',[AdminController::class,'home']);
+
+//about
+Route::get('/about', [AboutController::class, 'index'])->name('home.about');
+Route::get('/expert', [ExpertController::class, 'index'])->name('home.expert');
+
 
 
 

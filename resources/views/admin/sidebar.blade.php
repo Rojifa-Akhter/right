@@ -32,10 +32,11 @@
               </ul>
             </div>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="admin/pages/forms/basic_elements.html">
+            <a class="nav-link" href="{{ url('/viewExpert') }}">
               <i class="icon-file menu-icon"></i>
-              <span class="menu-title">Form elements</span>
+              <span class="menu-title">Expert</span>
             </a>
           </li>
           <li class="nav-item">
