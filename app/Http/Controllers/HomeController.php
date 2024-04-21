@@ -16,9 +16,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data1=Expert::all();
-        return view("home");
+        $expert = Expert::all();
+        return view('home.expert',compact('expert'));
     }
+    public function expertDetails($id)
+    {
+        $expert = Expert::find($id);
+        return view('home.expertDetails',compact('expert'));
+    }
+    
 
     /**
      * Show the form for creating a new resource.

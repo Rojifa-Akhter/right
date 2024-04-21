@@ -16,34 +16,8 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-            <form action="{{ url('/uploadExpert') }}" method="Post" enctype="multipart/form-data">
-                @csrf
-                <div class="mb-3 row">
-                  <label for="name">Name</label>
-                  <div class="form-group">
-                    <input style="color: green" type="text" name="name" required="" placeholder="Enter Name">
-                  </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="speciality">Speciality</label>
-                    <div class="form-group">
-                      <input style="color: green" type="text" name="speciality" required="" placeholder="Enter speciality">
-                    </div>
-                  </div>  
-              
-                <div class="mb-3 row">
-                  
-                    <input type="file" name="image" required="">
-   
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary" value="save">Save</button>
-                     {{-- <a href="{{ route('field_list') }}">  <button type="button" class="btn btn-primary">Go Back</button> </a> --}}
-                    
-                </div>
-              </form>
               <div class="container">
-                <h1 class="mt-5 mb-4">Expert List</h1>
+                <h1 class="mt-5 mb-4">View Expert</h1>
                 <div class="col-md-1">
                     {{-- <a style="" href="{{ route('field_add') }}"><button type="button" class="btn btn-block btn-primary">Add</button></a> --}}
                 </div>
@@ -64,20 +38,21 @@
                                   </thead>
                                   <tbody>
                                     <?php 
-                        if(!empty($data)){
-                        foreach($data as $data){  ?>
+                        if(!empty($data1)){
+                        foreach($data1 as $data1){  ?>
                             <tr>
-                              <td>{{ $data->id}}</td>
-                              <td>{{ $data->name}}</td>
-                              <td>{{ $data->speciality}}</td>
-                              <td><img src="/expertimage/{{ $data->image }}" alt=""></td>
+                              <td>{{ $data1->id}}</td>
+                              <td>{{ $data1->name}}</td>
+                              <td>{{ $data1->speciality}}</td>
+                              <td><img src="/expertimage/{{ $data1->image }}" alt=""></td>
                              
                               <td>
-                                {{--api key== AIzaSyB8WOJ3uAOTaeJSwR7gmnCii7_tLVBJDf4 --}}
+                                {{-- <!-- {{--api key== AIzaSyB8WOJ3uAOTaeJSwR7gmnCii7_tLVBJDf4 --}}
                                 {{-- <a href=""><button type="button" class="btn btn-sm btn-primary">View</button></a> --}}
-                                <a href="{{url('/updateExpert',$data->id)}}"><button type="button" class="btn btn-sm btn-success">Update</button></a>
-                                <a href="{{ url('/deleteExpert', $data->id) }}" onclick="return confirm('Are you sure you want to delete this field?')">Delete</a>
-        
+                                <a href="{{url('/updateExpert',$data1->id)}}"><button type="button" class="btn btn-warning">Update</button></a>
+                                <a href="{{ url('/deleteExpert', $data1->id) }}" onclick="return confirm('Are you sure you want to delete this?')">
+                                  <button type="button" class="btn btn-danger">Delete</a>
+
                             </td>
                             </tr>
                         <?php 

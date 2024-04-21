@@ -15,7 +15,7 @@ use App\Http\Controllers\WaterSourceController;
 use App\Http\Controllers\WaterUsageController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\CropController;
-
+use App\Models\Expert;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,18 +31,25 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[AdminController::class,'home']);
+
+//expert
+Route::get('/createExpert', [AdminController::class, 'createExpert']);
+Route::post('/addExpert',[AdminController::class,'addExpert']);
 Route::get('/viewExpert',[AdminController::class,'viewExpert']);
-Route::post('/uploadExpert',[AdminController::class,'uploadExpert']);
 Route::get('/updateExpert/{id}',[AdminController::class,'updateExpert']);
-Route::post('/updateAgriExpert/{id}',[AdminController::class,'updateAgriExpert']);
+Route::post('/editExpert/{id}',[AdminController::class,'editExpert']);
 Route::get('/deleteExpert/{id}', [AdminController::class, 'deleteExpert']);
+
 
 
 // Route::get('/soil_list',[AdminController::class,'home']);
 
 //about
 Route::get('/about', [AboutController::class, 'index'])->name('home.about');
-Route::get('/expert', [ExpertController::class, 'index'])->name('home.expert');
+//expert home as user
+Route::get('/expert', [HomeController::class, 'index'])->name('home.expert');
+Route::get('/expertDetails/{id}',[HomeController::class,'expertDetails']);
+
 
 
 

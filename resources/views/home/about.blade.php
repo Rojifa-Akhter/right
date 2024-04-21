@@ -74,7 +74,7 @@
                                                     <li class="dropdown">
                                                         <a href="#">Pages</a>
                                                         <ul class="shadow-box">
-                                                            <li><a href="farmers.html">Farmers</a></li>
+                                                            <li><a href="{{ url('expert') }}">Expert</a></li>
                                                             <li><a href="farmers-carousel.html">Farmers Carousel</a>
                                                             </li>
                                                             <li><a href="testimonials.html">Testimonials</a></li>
@@ -355,7 +355,7 @@
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="farmers.html">Aleesha Brown</a></h3>
+                                <h3 class="team-one__title"><a href="{{ url('expert') }}">Aleesha Brown</a></h3>
                                 <p class="team-one__subtitle">Senior Expert</p>
                             </div>
                         </div>
@@ -393,7 +393,7 @@
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="farmers.html">Kevin Martin</a></h3>
+                                <h3 class="team-one__title"><a href="{{ url('expert') }}">Kevin Martin</a></h3>
                                 <p class="team-one__subtitle">Senior Expert</p>
                             </div>
                         </div>
@@ -431,7 +431,7 @@
                                 </div>
                             </div>
                             <div class="team-one__content">
-                                <h3 class="team-one__title"><a href="farmers.html">Sarah Albert</a></h3>
+                                <h3 class="team-one__title"><a href="{{ url('expert') }}">Sarah Albert</a></h3>
                                 <p class="team-one__subtitle">Senior Expert</p>
                             </div>
                         </div>

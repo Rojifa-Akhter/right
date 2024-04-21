@@ -34,10 +34,19 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/viewExpert') }}">
-              <i class="icon-file menu-icon"></i>
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic-collapse" aria-expanded="false" aria-controls="ui-basic-collapse">
+              <i class="icon-disc menu-icon"></i>
               <span class="menu-title">Expert</span>
+              <i class="menu-arrow"></i>
             </a>
+            <div class="collapse" id="ui-basic-collapse">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{ url('createExpert') }}">Add Expert</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('viewExpert') }}">View Expert</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('updateExpert') }}">Update Expert</a></li>
+
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="admin/pages/charts/chartjs.html">

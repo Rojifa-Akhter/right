@@ -13,6 +13,8 @@ class AdminController extends Controller
 {
     public function index()
     {
+
+
         if (Auth::id()) {
             $usertype = Auth()->user()->usertype;
 
@@ -29,58 +31,65 @@ class AdminController extends Controller
     {
         return view('home.index');
     }
-    public function viewExpert()
+   
+    public function createExpert()
     {
-        $data = Expert::all();
-        return view('admin.adminExpert', compact('data'));
+        return view('admin.createExpert');
     }
-    public function uploadExpert(Request $request)
+
+    public function addExpert(Request $request)
     {
-        $data = new Expert();
+        $data1 = new Expert();
 
         $image = $request->image;
 
         $imagename = time() . '.' . $image->getClientOriginalExtension();
 
         $request->image->move('expertimage', $imagename);
-        $data->image = $imagename;
+        $data1->image = $imagename;
 
-        $data->name = $request->name;
-        $data->speciality = $request->speciality;
+        $data1->name = $request->name;
+        $data1->speciality = $request->speciality;
 
-        $data->save();
+        $data1->save();
 
         return redirect()->back();
     }
+    public function viewExpert()
+    {
+        $data1 = Expert::all();
+        return view('admin.viewExpert', compact('data1'));
+    }
     public function updateExpert($id)
     {
-        $data = Expert::find($id);
-        return view('admin.updateExpert', compact('data'));
-    }
-    public function updateAgriExpert(Request $request, $id)
-    {
-        $data = Expert::find($id);
+        $data1 = Expert::find($id);
 
+        return view('admin.updateExpert', compact('data1'));
+    }
+    public function editExpert(Request $request, $id)
+    {
+        $data1 = Expert::find($id);
         $image = $request->image;
 
         if ($image) {
             $imagename = time() . '.' . $image->getClientOriginalExtension();
 
             $request->image->move('expertimage', $imagename);
-            $data->image = $imagename;
+            $data1->image = $imagename;
         }
 
-        $data->name = $request->name;
-        $data->speciality = $request->speciality;
+        $data1->name = $request->name;
+        $data1->speciality = $request->speciality;
 
-        $data->save();
+        $data1->save();
         return redirect()->back();
     }
+
     public function deleteExpert($id)
     {
-        $data=Expert::find($id);
+        $data1 = Expert::find($id);
 
-        $data->delete();
+        $data1->delete();
         return redirect()->back();
     }
 }

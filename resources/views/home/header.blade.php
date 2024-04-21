@@ -2,7 +2,7 @@
   <div class="main-header__wrapper">
       <div class="main-header__wrapper-inner">
           <div class="main-header__logo">
-              <a href="{{ url('home.index') }}"><img src="assets/images/resources/logo-1.png" alt=""></a>
+              <a href="{{ url('/') }}"><img src="assets/images/resources/logo-1.png" alt=""></a>
           </div>
           <div class="main-header__menu-box">
               <div class="main-header__menu-box-bottom">
@@ -14,7 +14,7 @@
                                       <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                       <ul class="main-menu__list">
                                           <li class="dropdown current megamenu">
-                                              <a href=" ">Home </a>
+                                              <a href=" {{ '/' }}">Home </a>
                                           </li>
                                           <li>
                                               <a href="{{ url('about') }}">About</a>

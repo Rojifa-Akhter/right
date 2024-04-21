@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <base href="/public">
     @include('admin.css')
     <style>
         /* Custom CSS for form styling */
@@ -48,42 +47,32 @@
             @include('admin.sidebar')
             <!-- partial -->
             <div class="main-panel">
-                <h1 style="margin:50px; margin-left: 20%;">Update Expert</h1>
+              <h1 style="margin:50px; margin-left: 20%;">Create Expert</h1>
                 <div class="content-wrapper">
-                    <form action="{{ url('editExpert',$data1->id) }}" method="Post" enctype="multipart/form-data">
+                  
+                    <form action="{{ url('/addExpert') }}" method="Post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
                             <label for="name" class="col-sm-2 col-form-label">Name</label>
-                            <input type="hidden" class="form-control" name="id" value="{{ $data1->id }}">
-                            
                             <div class="col-sm-10">
-                                <input type="text" autocomplete="off" class="form-control" name="name"
-                                placeholder="Enter Name" value="{{ $data1->name }}">
+                                <input type="text" name="name" required placeholder="Enter Name">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="speciality" class="col-sm-2 col-form-label">Speciality</label>
                             <div class="col-sm-10">
-                                <input type="text" autocomplete="off" class="form-control" id="speciality" name="speciality"
-                                placeholder="Enter speciality" value="{{ $data1->speciality }}">
-                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="image" class="col-sm-2 col-form-label">Current Image</label>
-                            <div class="col-sm-10">
-                                <img src="expertimage/{{ $data1->image }}" alt="">
+                                <input type="text" name="speciality" required placeholder="Enter Speciality">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="image" class="col-sm-2 col-form-label">Upload Image</label>
+                            <label for="image" class="col-sm-2 col-form-label">Image</label>
                             <div class="col-sm-10">
                                 <input type="file" name="image" required>
                             </div>
                         </div>
-                        
                         <div class="form-group row">
                             <div class="col-sm-10 offset-sm-2">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Save</button>
                             </div>
                         </div>
                     </form>
