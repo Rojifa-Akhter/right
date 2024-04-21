@@ -44,7 +44,7 @@ class HomeController extends Controller
 
         $book->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('message','Expert booked successfully');
 
     }
     

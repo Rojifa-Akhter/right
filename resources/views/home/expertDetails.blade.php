@@ -5,6 +5,10 @@
 <head>
     <base href="/public">
     @include('home.css')
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
 </head>
 
 <body class="custom-cursor">
@@ -77,6 +81,15 @@
 
                     <div class="col-md-6" style="background-color: rgb(112, 112, 92)">
                         <h1 style="font-size: 60px;">Book Expert</h1>
+
+                        <div>
+                            @if (session()->has('message'))
+                            <div class="alert alert-success">
+                                <button type="button" class="close" data-bs-dismiss="alert"> X </button>
+                                {{ session()->get('message') }}
+                            </div>
+                            @endif
+                        </div>
                         
                         <form onsubmit="return validateForm()" action="{{ url('addBooking',$expert->id) }}" method="POST">
 
@@ -121,7 +134,7 @@
                             </div>
                         </div>
                         <div style="margin-top: 10px;">
-                        <input type="submit" class="btn btn-primary" value="Book Expert">
+                        <input type="submit" style="background-color: skyblue;" class="btn btn-primary" value="Book Expert">
 
                         </div>                      
                         
@@ -236,7 +249,7 @@
             return formIsValid; // Return form validity status
         }
     </script>
-    
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> 
 
     
 </body>
