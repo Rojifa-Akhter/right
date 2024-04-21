@@ -49,6 +49,8 @@ Route::get('/about', [AboutController::class, 'index'])->name('home.about');
 //expert home as user
 Route::get('/expert', [HomeController::class, 'index'])->name('home.expert');
 Route::get('/expertDetails/{id}',[HomeController::class,'expertDetails']);
+Route::post('/addBooking/{id}',[HomeController::class,'addBooking']);
+
 
 
 

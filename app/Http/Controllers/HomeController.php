@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Home;
 use App\Models\Expert;
+use App\Models\Booking;
 use Illuminate\Http\Request;
 
 
@@ -23,6 +24,28 @@ class HomeController extends Controller
     {
         $expert = Expert::find($id);
         return view('home.expertDetails',compact('expert'));
+    }
+    public function addBooking(Request $request, $id)
+    { 
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'date' => 'required',
+        ]);
+        
+
+        $book = new Booking;
+        $book -> expert_id = $id;
+        $book -> name = $request->name;
+        $book -> email = $request->email;
+        $book -> phone = $request->phone;
+        $book -> date = $request->date;
+
+        $book->save();
+
+        return redirect()->back();
+
     }
     
 

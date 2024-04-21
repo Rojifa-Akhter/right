@@ -76,31 +76,48 @@
                     </div>
 
                     <div class="col-md-6" style="background-color: rgb(112, 112, 92)">
+                        <h1 style="font-size: 60px;">Book Expert</h1>
                         
+                        <form onsubmit="return validateForm()" action="{{ url('addBooking',$expert->id) }}" method="POST">
+
+                            @csrf
                         <div class="col-sm-10">
                             <label class="col-sm-2 col-form-label">Name</label>
                             <div>
-                                <input type="text" name="name">
+                                <input type="text" id="name" name="name" 
+                                @if (Auth::id())
+                                value="{{ Auth::user()->name }}"
+                                @endif >
+                                <span id="nameError" class="text-danger"></span>
                             </div>
                             
                         </div>
                         <div class="col-sm-10">
                             <label class="col-sm-2 col-form-label">Email</label>
                             <div>
-                                <input type="email" name="email">
+                                <input type="email" id="email" name="email"
+                                @if (Auth::id())
+                                value="{{ Auth::user()->email }}"
+                                @endif>
+                                <span id="emailError" class="text-danger"></span>
                             </div>
                             
                         </div>
                         <div class="col-sm-10">
                             <label class="col-sm-2 col-form-label">Phone</label>
                             <div>
-                                <input type="number" name="phone">
+                                <input type="number" id="phone" name="phone"
+                                @if (Auth::id())
+                                value="{{ Auth::user()->phone }}"
+                                @endif>
+                                <span id="phoneError" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-sm-10">
                             <label class="col-sm-2 col-form-label">Date</label>
                             <div>
-                                <input type="date" name="date">
+                                <input type="date" id="date" name="date">
+                                <span id="dateError" class="text-danger"></span>
                             </div>
                         </div>
                         <div style="margin-top: 10px;">
@@ -108,6 +125,7 @@
 
                         </div>                      
                         
+                    </form>
                     </div>
                     
                 </div>
@@ -186,8 +204,39 @@
         <!-- /.search-popup__content -->
     </div>
     <!-- /.search-popup -->
+    
 
-
+    {{-- validation --}}
+    <script>
+        function validateForm() {
+            var inputs = [
+                { id: "name", name: "Name" },
+                { id: "email", name: "Email" },
+                { id: "phone", name: "Phone" },
+                { id: "date", name: "Date" },
+            ];
+    
+            var formIsValid = true;
+    
+            inputs.forEach(function (input) {
+                var value = document.getElementById(input.id).value.trim();
+                var errorElement = document.getElementById(input.id + "Error");
+    
+                errorElement.innerText = ""; // Clear previous error message
+    
+                if (value === "") {
+                    errorElement.innerText = "* Please enter the " + input.name;
+                    formIsValid = false; // Set form validity flag to false
+                    document.getElementById(input.id).classList.add("is-invalid");
+                } else {
+                    document.getElementById(input.id).classList.remove("is-invalid");
+                }
+            });
+    
+            return formIsValid; // Return form validity status
+        }
+    </script>
+    
 
     
 </body>
