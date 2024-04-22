@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Expert;
 use App\Models\Bookings;
 use App\Models\Post;
+use App\Models\blogDetails;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -19,6 +20,7 @@ class AdminController extends Controller
 
 
         if (Auth::id()) {
+
             $usertype = Auth()->user()->usertype;
 
             if ($usertype == 'user') {
@@ -175,5 +177,95 @@ class AdminController extends Controller
 
         $post->delete();
         return redirect()->back()->with('message','Post Delete Successfully');
+    }
+    public function editPost($id)
+    {
+        $post = Post::find($id);
+
+        return view('admin.editPost', compact('post'));
+    }
+    public function updatePost(Request $request, $id)
+    {
+        $post = Post::find($id);
+        $image = $request->image;
+
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+
+            $request->image->move('postimage', $imagename);
+            $post->image = $imagename;
+        }
+
+        $post->title = $request->title;
+        $post->save();
+        return redirect()->back()->with('message','Post Update Successfully');
+    }
+    //blog
+    public function blogDetails()
+    {
+        $dblog = blogDetails::all();
+        return view('admin.blogDetails' , compact('dblog'));
+    }
+    public function postBlog()
+    {
+        return view('admin.postBlog');
+    }
+    public function addBlog(Request $request)
+    {
+        $user=Auth()->user();
+        $user_id = $user->id;
+        $name = $user->name;
+        $usertype = $user->usertype;
+
+        $dblog = new blogDetails;
+
+        $dblog->title = $request->title;
+        $dblog->description = $request->description;
+
+        $dblog->user_id = $user_id;
+        $dblog->name = $name;
+        $dblog->usertype = $usertype;
+
+        $image = $request->image;
+
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+
+            $request->image->move('postimage', $imagename);
+            $dblog->image = $imagename;
+        }
+
+        $dblog->save();
+        return redirect()->back()->with('message','Blog Details Added successfulle');
+    }
+    public function deleteBlog($id)
+    {
+        $dblog = blogDetails::find($id);
+
+        $dblog->delete();
+        return redirect()->back()->with('message','Post Delete Successfully');
+    }
+    public function editBlog($id)
+    {
+        $dblog = blogDetails::find($id);
+
+        return view('admin.editBlog', compact('dblog'));
+    }
+    public function updateBlog(Request $request, $id)
+    {
+        $dblog = blogDetails::find($id);
+        $image = $request->image;
+
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+
+            $request->image->move('postimage', $imagename);
+            $dblog->image = $imagename;
+        }
+
+        $dblog->title = $request->title;
+        $dblog->description = $request->description;
+        $dblog->save();
+        return redirect()->back()->with('message','Post Update Successfully');
     }
 }

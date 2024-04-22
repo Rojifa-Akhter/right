@@ -50,15 +50,9 @@
                                               </ul>
                                           </li>
                                           <li class="dropdown">
-                                              <a href="#">Blog</a>
-                                              <ul class="shadow-box">
-                                                  <li><a href="blog.html">Blog</a></li>
-                                                  <li><a href="blog-carousel.html">Blog Carousel</a></li>
-                                                  <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                                  <li><a href="blog-details.html">Blog Details</a></li>
-                                              </ul>
+                                              <a href="{{ url('blog') }}">Blog</a>
                                           </li>
-                                
+                               
                                           <li>
                                               <a href="contact.html">Contact</a>
                                           </li>
@@ -72,6 +66,9 @@
                                                 <x-app-layout>
                                                     
                                                 </x-app-layout>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a href="{{ url('createBlog') }}">Create Blog</a>
                                                 </li>
                                                 @else
                                                 <li>
@@ -96,9 +93,9 @@
                                           <a href="#"
                                               class="main-menu__search search-toggler icon-magnifying-glass"></a>
                                       </div>
-                                      <div class="main-menu__cart-box">
+                                      {{-- <div class="main-menu__cart-box">
                                           <a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
-                                      </div>
+                                      </div> --}}
                                       <div class="main-menu__btn-box">
                                           <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
                                               <i class="icon-right-arrow"></i> </a>
@@ -114,13 +111,13 @@
               <div class="main-header__phone-number">
                   <a href="tel:9200886823">+92 (0088) 6823</a>
               </div>
-              <div class="main-header__call-box">
+              {{-- <div class="main-header__call-box">
                   <div class="main-header__call-inner">
                       <div class="main-header__call-icon">
                           <span class="fas fa-phone"></span>
                       </div>
                   </div>
-              </div>
+              </div> --}}
           </div>
       </div>
   </div>

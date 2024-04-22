@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/',[AdminController::class,'home']);
+Route::get('/',[AdminController::class,'home'])->middleware('auth');
 
 //expert
 Route::get('/createExpert', [AdminController::class, 'createExpert']);
@@ -49,9 +49,20 @@ Route::get('/rejectedBook/{id}',[AdminController::class,'rejectedBook']);
 Route::get('/postPage', [AdminController::class, 'postPage']);
 Route::post('/addPost',[AdminController::class,'addPost']);
 Route::get('/showPost',[AdminController::class,'showPost']);
-// Route::get('/updateExpert/{id}',[AdminController::class,'updateExpert']);
-// Route::post('/editExpert/{id}',[AdminController::class,'editExpert']);
+Route::get('/editPost/{id}',[AdminController::class,'editPost']);
+Route::post('/updatePost/{id}',[AdminController::class,'updatePost']);
 Route::get('/deletePost/{id}', [AdminController::class, 'deletePost']);
+
+//blog details for admin
+
+Route::get('/postBlog',[AdminController::class,'postBlog']);
+Route::get('/blogDetails',[AdminController::class,'blogDetails']);
+Route::post('/addBlog',[AdminController::class,'addBlog']);
+Route::get('/editBlog/{id}',[AdminController::class,'editBlog']);
+Route::post('/updateBlog/{id}',[AdminController::class,'updateBlog']);
+Route::get('/deleteBlog/{id}', [AdminController::class, 'deleteBlog']);
+
+
 
 
 // Route::get('/soil_list',[AdminController::class,'home']);
@@ -63,7 +74,11 @@ Route::get('/expert', [HomeController::class, 'index'])->name('home.expert');
 Route::get('/expertDetails/{id}',[HomeController::class,'expertDetails']);
 Route::post('/addBooking/{id}',[HomeController::class,'addBooking']);
 
-
+//blog for user
+Route::get('/blog', [HomeController::class, 'blog']);
+Route::get('/blog_details/{id}', [HomeController::class, 'blog_details']);
+Route::get('/createBlog', [HomeController::class, 'createBlog'])->middleware('auth');
+Route::post('/userBlog', [HomeController::class, 'userBlog']);
 
 
 

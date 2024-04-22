@@ -67,6 +67,18 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{ url('blogDetails') }}">
+              <i class="icon-command menu-icon"></i>
+              <span class="menu-title">Blog Details</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('postBlog') }}">
+              <i class="icon-command menu-icon"></i>
+              <span class="menu-title">Add Blog</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="">
               <i class="icon-help menu-icon"></i>
               <span class="menu-title"></span>

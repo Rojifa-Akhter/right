@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Home;
 use App\Models\Expert;
 use App\Models\Booking;
+use App\Models\Post;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -49,69 +50,52 @@ class HomeController extends Controller
     }
     
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    //for blog
+    public function blog()
     {
-        //
+        $blog = Post::all();
+        return view('home.blog',compact('blog'));
+    }
+    public function blog_details($id)
+    {
+        $blog = Post::find($id);
+        return view('home.blog_details',compact('blog'));
+    }
+    public function createBlog()
+    {
+        return view('home.createBlog');
+    }
+    public function userBlog(Request $request)
+    {
+        $user=Auth()->user();
+        $user_id = $user->id;
+        $name = $user->name;
+        $usertype = $user->usertype;
+
+        $ublog = new Post;
+
+        $ublog->title = $request->title;
+
+        $ublog->user_id = $user_id;
+        $ublog->name = $name;
+        $ublog->usertype = $usertype;
+        $ublog->post_status = 'pending';
+
+
+
+        $image = $request->image;
+
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+
+            $request->image->move('postimage', $imagename);
+            $ublog->image = $imagename;
+        }
+        $ublog->save();
+
+        return redirect()->back()->with('message','Blog Added successfulle');
+         
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Home  $home
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Home $home)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Home  $home
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Home $home)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Home  $home
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Home $home)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Home  $home
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Home $home)
-    {
-        //
-    }
+    
 }

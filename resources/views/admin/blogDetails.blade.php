@@ -24,10 +24,9 @@
                 </div>
                     
                 @endif
-                <h1 class="mt-5 mb-4">All Post</h1>
+                <h1 class="mt-5 mb-4">Blog Details</h1>
                 <div class="col-md-1">
-                    {{-- <a style="" href="{{ route('field_add') }}"><button type="button" class="btn btn-block btn-primary">Add</button></a> --}}
-                </div>
+                     </div>
                 <div class="mb-3 input-group">
                     <form action="" method="post" class="form-inline">
                         @csrf
@@ -37,9 +36,9 @@
                                   <thead>
                                   <tr> 
                                                            
-                                    <th>Post Title</th>
-                                    <th>Post By</th>
-                                    <th>Post Status</th>
+                                    <th>Blog Title</th>
+                                    <th>Write By</th>
+                                    <th>Description</th>
                                     <th>User Type</th>
                                     <th>Image</th>
                                     <th>Action</th>
@@ -47,23 +46,23 @@
                                   </thead>
                                   <tbody>
                                     <?php 
-                        if(!empty($post)){
-                        foreach($post as $post){  ?>
+                        if(!empty($dblog)){
+                        foreach($dblog as $dblog){  ?>
                             <tr>
                               
-                              <td>{{ $post->title}}</td>
-                              <td>{{ $post->name}}</td>
-                              <td>{{ $post->post_status}}</td>
-                              <td>{{ $post->usertype}}</td>
-                              <td><img src="/postimage/{{ $post->image }}" alt=""></td>
+                              <td>{{ $dblog->title}}</td>
+                              <td>{{ $dblog->name}}</td>
+                              <td>{{ $dblog->description}}</td>
+                              <td>{{ $dblog->usertype}}</td>
+                              <td><img src="/postimage/{{ $dblog->image }}" alt=""></td>
                              
                               <td>
                                 {{-- <!-- {{--api key== AIzaSyB8WOJ3uAOTaeJSwR7gmnCii7_tLVBJDf4 --}}
                                 {{-- <a href=""><button type="button" class="btn btn-sm btn-primary">View</button></a> --}}
-                                <a href="{{url('/editPost',$post->id)}}"><button type="button" class="btn btn-warning">Edit</button></a>
-                                <a href="{{ url('/deletePost', $post->id) }}" onclick="return confirm('Are you sure you want to delete this?')">
-                                  <button type="button" class="btn btn-danger">Delete</a>
-
+                                <div class="btn-group">
+                                  <a href="{{ url('/editBlog', $dblog->id) }}" class="btn btn-warning mr-2">Edit</a> <!-- Added mr-2 for margin -->
+                                  <a href="{{ url('/deleteBlog', $dblog->id) }}" onclick="return confirm('Are you sure you want to delete this?')" class="btn btn-danger">Delete</a>
+                              </div>
                             </td>
                             </tr>
                         <?php 
