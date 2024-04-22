@@ -68,6 +68,9 @@
                                                 </x-app-layout>
                                                 </li>
                                                 <li class="dropdown">
+                                                    <a href="{{ url('myBlog') }}">My Post</a>
+                                                </li>
+                                                <li class="dropdown">
                                                     <a href="{{ url('createBlog') }}">Create Blog</a>
                                                 </li>
                                                 @else

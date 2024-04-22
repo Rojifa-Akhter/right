@@ -116,7 +116,7 @@
                 </div>
                     
                 @endif
-                <h1><b>Create Blog</b></h1>
+                <h1 style="font-size: 50px;"><b>Create Blog</b></h1>
                 <form action="{{ url('/userBlog') }}" method="Post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">

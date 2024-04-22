@@ -19,47 +19,46 @@ class HomeController extends Controller
     public function index()
     {
         $expert = Expert::all();
-        return view('home.expert',compact('expert'));
+        return view('home.expert', compact('expert'));
     }
     public function expertDetails($id)
     {
         $expert = Expert::find($id);
-        return view('home.expertDetails',compact('expert'));
+        return view('home.expertDetails', compact('expert'));
     }
     public function addBooking(Request $request, $id)
-    { 
+    {
         $request->validate([
             'name' => 'required',
             'email' => 'required',
             'phone' => 'required',
             'date' => 'required',
         ]);
-        
+
 
         $book = new Booking;
-        $book -> expert_id = $id;
-        $book -> name = $request->name;
-        $book -> email = $request->email;
-        $book -> phone = $request->phone;
-        $book -> date = $request->date;
+        $book->expert_id = $id;
+        $book->name = $request->name;
+        $book->email = $request->email;
+        $book->phone = $request->phone;
+        $book->date = $request->date;
 
         $book->save();
 
-        return redirect()->back()->with('message','Expert booked successfully');
-
+        return redirect()->back()->with('message', 'Expert booked successfully');
     }
-    
+
 
     //for blog
     public function blog()
     {
         $blog = Post::all();
-        return view('home.blog',compact('blog'));
+        return view('home.blog', compact('blog'));
     }
     public function blog_details($id)
     {
         $blog = Post::find($id);
-        return view('home.blog_details',compact('blog'));
+        return view('home.blog_details', compact('blog'));
     }
     public function createBlog()
     {
@@ -67,7 +66,7 @@ class HomeController extends Controller
     }
     public function userBlog(Request $request)
     {
-        $user=Auth()->user();
+        $user = Auth()->user();
         $user_id = $user->id;
         $name = $user->name;
         $usertype = $user->usertype;
@@ -93,9 +92,46 @@ class HomeController extends Controller
         }
         $ublog->save();
 
-        return redirect()->back()->with('message','Blog Added successfulle');
-         
+        return redirect()->back()->with('message', 'Blog Added successfulle');
+    }
+    public function myBlog()
+    {
+        $user = Auth()->user();
+        $user_id = $user->id;
+        // $name = $user->name;
+        // $usertype = $user->usertype;
+
+        $mblog = Post::where('user_id', '=', $user_id)->get();
+        return view('home.myBlog', compact('mblog'));
+    }
+    public function delete_myBlog($id)
+    {
+        $mblog = Post::find($id);
+
+        $mblog->delete();
+        return redirect()->back()->with('message', 'Post Delete Successfully');
     }
 
-    
+    public function edit_myBlog($id)
+    {
+        $mblog = Post::find($id);
+
+        return view('home.edit_myBlog', compact('mblog'));
+    }
+    public function update_myBlog(Request $request, $id)
+    {
+        $mblog = Post::find($id);
+        $image = $request->image;
+
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+
+            $request->image->move('postimage', $imagename);
+            $mblog->image = $imagename;
+        }
+
+        $mblog->title = $request->title;
+        $mblog->save();
+        return redirect()->back()->with('message', 'Post Update Successfully');
+    }
 }

@@ -79,6 +79,10 @@ Route::get('/blog', [HomeController::class, 'blog']);
 Route::get('/blog_details/{id}', [HomeController::class, 'blog_details']);
 Route::get('/createBlog', [HomeController::class, 'createBlog'])->middleware('auth');
 Route::post('/userBlog', [HomeController::class, 'userBlog']);
+Route::get('/myBlog', [HomeController::class, 'myBlog']);
+Route::get('/delete_myBlog/{id}', [HomeController::class, 'delete_myBlog']);
+Route::get('/edit_myBlog/{id}',[HomeController::class,'edit_myBlog']);
+Route::post('/update_myBlog/{id}',[HomeController::class,'update_myBlog']);
 
 
 
