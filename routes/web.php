@@ -39,7 +39,19 @@ Route::get('/viewExpert',[AdminController::class,'viewExpert']);
 Route::get('/updateExpert/{id}',[AdminController::class,'updateExpert']);
 Route::post('/editExpert/{id}',[AdminController::class,'editExpert']);
 Route::get('/deleteExpert/{id}', [AdminController::class, 'deleteExpert']);
+//book admin work
+Route::get('/bookings',[AdminController::class,'bookings']);
+Route::get('/deleteBookings/{id}',[AdminController::class,'deleteBookings']);
+Route::get('/approvedBook/{id}',[AdminController::class,'approvedBook']);
+Route::get('/rejectedBook/{id}',[AdminController::class,'rejectedBook']);
 
+//blog for admin
+Route::get('/postPage', [AdminController::class, 'postPage']);
+Route::post('/addPost',[AdminController::class,'addPost']);
+Route::get('/showPost',[AdminController::class,'showPost']);
+// Route::get('/updateExpert/{id}',[AdminController::class,'updateExpert']);
+// Route::post('/editExpert/{id}',[AdminController::class,'editExpert']);
+Route::get('/deletePost/{id}', [AdminController::class, 'deletePost']);
 
 
 // Route::get('/soil_list',[AdminController::class,'home']);
@@ -50,6 +62,8 @@ Route::get('/about', [AboutController::class, 'index'])->name('home.about');
 Route::get('/expert', [HomeController::class, 'index'])->name('home.expert');
 Route::get('/expertDetails/{id}',[HomeController::class,'expertDetails']);
 Route::post('/addBooking/{id}',[HomeController::class,'addBooking']);
+
+
 
 
 

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Expert;
+use App\Models\Bookings;
+use App\Models\Post;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -31,7 +34,7 @@ class AdminController extends Controller
     {
         return view('home.index');
     }
-   
+
     public function createExpert()
     {
         return view('admin.createExpert');
@@ -91,5 +94,86 @@ class AdminController extends Controller
 
         $data1->delete();
         return redirect()->back();
+    }
+    //book expert
+    public function bookings()
+    {
+        $books = Booking::all();
+
+        return view('admin.bookings', compact('books'));
+    }
+    public function deleteBookings($id)
+    {
+        $books = Booking::find($id);
+
+        $books->delete();
+        return redirect()->back();
+    }
+    public function approvedBook($id)
+    {
+        $books = Booking::find($id);
+
+        $books->status = 'approved';
+
+        $books->save();
+
+        return redirect()->back();
+    }
+    public function rejectedBook($id)
+    {
+        $books = Booking::find($id);
+
+        $books->status = 'rejected';
+
+        $books->save();
+
+        return redirect()->back();
+    }
+
+    //post for blog
+
+    public function postPage()
+    {
+        return view('admin.postPage');
+    }
+    public function addPost(Request $request)
+    {
+        $user=Auth()->user();
+        $user_id = $user->id;
+        $name = $user->name;
+        $usertype = $user->usertype;
+
+        $post = new Post;
+
+        $post->title = $request->title;
+        $post->post_status = 'active';
+
+        $post->user_id = $user_id;
+        $post->name = $name;
+        $post->usertype = $usertype;
+
+        $image = $request->image;
+
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+
+            $request->image->move('postimage', $imagename);
+            $post->image = $imagename;
+        }
+
+        $post->save();
+        return redirect()->back()->with('message','Post Added successfulle');
+    }
+    public function showPost()
+    {
+        $post = Post::all();
+        return view('admin.showPost' , compact('post'));
+    }
+    public function deletePost($id)
+    {
+        $post = Post::find($id);
+
+        $post->delete();
+        return redirect()->back()->with('message','Post Delete Successfully');
     }
 }

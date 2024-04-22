@@ -16,11 +16,11 @@ class CreateFieldsTable extends Migration
         Schema::create('fields', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('location_id');
+            // $table->float('location_id');
             $table->float('area');
             $table->timestamps();
 
-            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
+            // $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
 
         });
     }

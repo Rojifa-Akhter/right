@@ -15,4 +15,9 @@ class Booking extends Model
         'phone',
         'date'
     ];
+
+    public function expert()
+    {
+        return $this->hasOne('App\Models\Expert','id','expert_id');
+    }
 }

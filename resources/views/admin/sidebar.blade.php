@@ -49,21 +49,27 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin/pages/charts/chartjs.html">
+            <a class="nav-link" href="{{ url('bookings') }}">
               <i class="icon-pie-graph menu-icon"></i>
-              <span class="menu-title">Charts</span>
+              <span class="menu-title">Bookings</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin/pages/tables/basic-table.html">
+            <a class="nav-link" href="{{ url('postPage') }}">
               <i class="icon-command menu-icon"></i>
-              <span class="menu-title">Tables</span>
+              <span class="menu-title">Add post</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin/pages/icons/feather-icons.html">
+            <a class="nav-link" href="{{ url('showPost') }}">
+              <i class="icon-command menu-icon"></i>
+              <span class="menu-title">Show Post</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
               <i class="icon-help menu-icon"></i>
-              <span class="menu-title">Icons</span>
+              <span class="menu-title"></span>
             </a>
           </li>
           <li class="nav-item">
