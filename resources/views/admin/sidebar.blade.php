@@ -79,9 +79,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ url('all_messages') }}">
               <i class="icon-help menu-icon"></i>
-              <span class="menu-title"></span>
+              <span class="menu-title">Messages</span>
             </a>
           </li>
           <li class="nav-item">

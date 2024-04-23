@@ -64,6 +64,12 @@ Route::get('/editBlog/{id}',[AdminController::class,'editBlog']);
 Route::post('/updateBlog/{id}',[AdminController::class,'updateBlog']);
 Route::get('/deleteBlog/{id}', [AdminController::class, 'deleteBlog']);
 
+//message admin
+Route::get('/all_messages',[AdminController::class,'all_messages']);
+Route::get('/sendMail/{id}',[AdminController::class,'sendMail']);
+Route::post('/mail/{id}',[AdminController::class,'mail']);
+
+
 
 
 
@@ -71,6 +77,11 @@ Route::get('/deleteBlog/{id}', [AdminController::class, 'deleteBlog']);
 
 //about
 Route::get('/about', [AboutController::class, 'index'])->name('home.about');
+
+//contact
+Route::get('/contact', [HomeController::class, 'contact']);
+Route::post('/addContact', [HomeController::class, 'addContact']);
+
 //expert home as user
 Route::get('/expert', [HomeController::class, 'index'])->name('home.expert');
 Route::get('/expertDetails/{id}',[HomeController::class,'expertDetails']);

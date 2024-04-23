@@ -9,7 +9,9 @@ use App\Models\Expert;
 use App\Models\Bookings;
 use App\Models\Post;
 use App\Models\blogDetails;
-
+use App\Models\Contact;
+use App\Notifications\SendEmailNotification;
+use Notification;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -286,4 +288,31 @@ class AdminController extends Controller
         $dblog->save();
         return redirect()->back()->with('message', 'Post Update Successfully');
     }
+
+    //messages
+    public function all_messages()
+    {
+        $data1 = Contact::all();
+        return view('admin.all_messages',compact('data1'));
+    }
+    public function sendMail($id)
+    {
+        $data1 = Contact::find($id);
+        return view('admin.sendMail',compact('data1'));
+    }
+    public function mail(Request $request, $id)
+{
+    $data1 = Contact::find($id);
+    $details = [
+        'greeting' => $request->greeting,
+        'body' => $request->body,
+        'action_text' => $request->action_text,
+        'action_url' => $request->action_url,
+        'endline' => $request->endline,
+    ];
+    Notification::send($data1, new SendEmailNotification($details));
+
+    return redirect()->back();
+}
+
 }

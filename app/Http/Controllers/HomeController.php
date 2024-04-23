@@ -6,6 +6,7 @@ use App\Models\Home;
 use App\Models\Expert;
 use App\Models\Booking;
 use App\Models\Post;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,7 +53,7 @@ class HomeController extends Controller
     //for blog
     public function blog()
     {
-        $blog = Post::where('post_status','=','active')->get();
+        $blog = Post::where('post_status', '=', 'active')->get();
         return view('home.blog', compact('blog'));
     }
     public function blog_details($id)
@@ -133,5 +134,26 @@ class HomeController extends Controller
         $mblog->title = $request->title;
         $mblog->save();
         return redirect()->back()->with('message', 'Post Update Successfully');
+    }
+
+    //contact 
+    public function contact()
+    {
+
+        return view('home.contact');
+    }
+    public function addContact(Request $request)
+    { 
+        $contact = new Contact;
+
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->phone = $request->phone;
+        $contact->subject = $request->subject;
+        $contact->comment = $request->comment;
+       
+        $contact->save();
+        // Redirect back with a success message
+        return redirect()->back()->with('message', 'Comment submitted successfully!');
     }
 }
