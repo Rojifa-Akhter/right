@@ -2,42 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soil</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-    body {
-        margin-bottom: 60px;
-        /* Height of the footer */
-    }
-
-    .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
-        /* Height of the footer */
-        background-color: #f5f5f5;
-    }
-
-    p.card-text {
-        margin-top: -10px;
-    }
-    </style>
+    
+  @include('admin.css')
 </head>
-
 <body>
-
-    {{-- {{ print_r($data) }} --}}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Soil</a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <h1 class="mt-5 mb-4">Soil type List</h1>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    @include('admin.nav')
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+     @include('admin.sidebar')
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+              <div class="container">
+                @if (session()->has('message'))
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+                {{ session()->get('message') }}
+                </div>
+                    
+                @endif
+        <h1 class="mt-5 mb-4">Soil List</h1>
         <div class="col-md-1">
             <a style="" href="{{ route('soil_add') }}"><button type="button" class="btn btn-block btn-primary">Add</button></a>
         </div>
@@ -92,16 +79,30 @@
                         </table>
                 </div>
             </form>
-
+        
         </div>
-       
+               
     </div>
-    <br><br>
-    <footer class="footer">
-        <div class="container">
-            <span class="text-muted">© 2024 Field. All rights reserved.</span>
-        </div>
-    </footer>
+
+  
+  
+</div>
+<!-- content-wrapper ends -->
+<!-- partial:partials/_footer.html -->
+@include('admin.footer')
+<!-- partial -->
+</div>
+<!-- main-panel ends -->
+
+</div>
+<!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- base:js -->
+
+<!-- End custom js for this page-->
 </body>
 
 </html>
+

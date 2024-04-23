@@ -25,9 +25,10 @@
             </a>
             <div class="collapse" id="ui-basic-collapse">
               <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{ url('locations') }}">Location</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('seasons') }}">Season</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('soils') }}">Soil</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{ url('fields') }}">Field</a></li>
-                <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Season</a></li>
-                <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Soil</a></li>
 
               </ul>
             </div>
