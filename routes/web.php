@@ -32,6 +32,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[AdminController::class,'home']);
 
+//user 
+Route::get('/showUser',[AdminController::class,'showUser']);
+Route::get('/editUser/{id}',[AdminController::class,'editUser']);
+Route::post('/updateUser/{id}',[AdminController::class,'updateUser']);
+Route::get('/deleteUser/{id}', [AdminController::class, 'deleteUser']);
+
+
 //expert
 Route::get('/createExpert', [AdminController::class, 'createExpert']);
 Route::post('/addExpert',[AdminController::class,'addExpert']);

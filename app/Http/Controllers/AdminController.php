@@ -207,7 +207,7 @@ class AdminController extends Controller
     {
         $data = Post::find($id);
 
-        $data->post_status='active';
+        $data->post_status = 'active';
         $data->save();
         return redirect()->back()->with('message', 'Post Status Changed to Active');
     }
@@ -215,7 +215,7 @@ class AdminController extends Controller
     {
         $data = Post::find($id);
 
-        $data->post_status='rejected';
+        $data->post_status = 'rejected';
         $data->save();
         return redirect()->back()->with('message', 'Post Status Changed to Rejected');
     }
@@ -293,26 +293,56 @@ class AdminController extends Controller
     public function all_messages()
     {
         $data1 = Contact::all();
-        return view('admin.all_messages',compact('data1'));
+        return view('admin.all_messages', compact('data1'));
     }
     public function sendMail($id)
     {
         $data1 = Contact::find($id);
-        return view('admin.sendMail',compact('data1'));
+        return view('admin.sendMail', compact('data1'));
     }
     public function mail(Request $request, $id)
-{
-    $data1 = Contact::find($id);
-    $details = [
-        'greeting' => $request->greeting,
-        'body' => $request->body,
-        'action_text' => $request->action_text,
-        'action_url' => $request->action_url,
-        'endline' => $request->endline,
-    ];
-    Notification::send($data1, new SendEmailNotification($details));
+    {
+        $data1 = Contact::find($id);
+        $details = [
+            'greeting' => $request->greeting,
+            'body' => $request->body,
+            'action_text' => $request->action_text,
+            'action_url' => $request->action_url,
+            'endline' => $request->endline,
+        ];
+        Notification::send($data1, new SendEmailNotification($details));
 
-    return redirect()->back();
-}
+        return redirect()->back();
+    }
+    //user
+    public function showUser()
+    {
+        $user = User::all();
+        return view('admin.showUser', compact('user'));
+    }
+    public function editUser($id)
+    {
+        $user = User::find($id);
 
+        return view('admin.editUser', compact('user'));
+    }
+    public function updateUser(Request $request, $id)
+    {
+        $user = User::find($id);
+        
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->usertype = $request->usertype;
+
+        $user->save();
+        return redirect()->back()->with('message', 'User Update Successfully');
+    }
+    public function deleteUser($id)
+    {
+        $user = User::find($id);
+
+        $user->delete();
+        return redirect()->back()->with('message', 'User Delete Successfully');
+    }
 }
