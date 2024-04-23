@@ -22,32 +22,16 @@
                                           <li class="dropdown">
                                               <a href="#">Services</a>
                                               <ul class="shadow-box">
-                                                  <li><a href="services.html">Services</a>
+                                                  <li><a href="">Services</a>
                                                   </li>
-                                                  <li><a href="services-carousel.html">Services Carousel</a>
-                                                  </li>
-                                                  <li><a href="agriculture-products.html">Agriculture
-                                                          Products</a></li>
-                                                  <li><a href="organic-products.html">Organic Products</a>
-                                                  </li>
-                                                  <li><a href="fresh-vegetables.html">Fresh Vegetables</a>
-                                                  </li>
-                                                  <li><a href="dairy-products.html">Dairy Products</a></li>
+                                                  
+                                                  <li><a href="{{ url('weather') }}">Weather Information</a></li>
                                               </ul>
                                           </li>
         
                                           <li class="dropdown">
-                                              <a href="#">Pages</a>
-                                              <ul class="shadow-box">
-                                                  <li><a href="{{ url('expert') }}">Expert</a></li>
-                                                  <li><a href="farmers-carousel.html">Farmers Carousel</a>
-                                                  </li>
-                                                  <li><a href="testimonials.html">Testimonials</a></li>
-                                                  <li><a href="testimonials-carousel.html">Testimonial
-                                                          Carousel</a></li>
-                                                  <li><a href="faq.html">FAQs</a></li>
-                                                  <li><a href="404.html">404 Error</a></li>
-                                              </ul>
+                                              <a href="{{ url('expert') }}">Expert</a>
+                                              
                                           </li>
                                           <li class="dropdown">
                                               <a href="{{ url('blog') }}">Blog</a>

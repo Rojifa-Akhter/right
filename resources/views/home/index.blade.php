@@ -55,7 +55,7 @@
                                 <span class="icon-agriculture"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title">a Smart organic <br> services</h3>
+                                <h3 class="feature-one__title">a Smart agriculture <br> services</h3>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                                 <span class="icon-harvest"></span>
                             </div>
                             <div class="feature-one__content">
-                                <h3 class="feature-one__title">Natural Healthy <br> prodducts</h3>
+                                <h3 class="feature-one__title">Agriculture <br> prodducts</h3>
                             </div>
                         </div>
                     </div>
@@ -94,9 +94,11 @@
                                 </div>
                             </div>
                             <p class="about-one__text-1">We’ve 20 years of agriculture farming experience.</p>
-                            <p class="about-one__text-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim dolore
-                                veniam.</p>
+                            <p class="about-one__text-2">Smart agriculture interventions can play a key role in increasing 
+                                productivity, accessibility, and quality of agricultural  products along with uplifting farmers’ 
+                                living standards. a2i has been associated with the Smart Bangladesh Vision 2041 since its emergence. 
+                                Smart Bangladesh is about being inclusive, about the people, the citizens of Bangladesh,  
+                                built on the 4 pillars: Smart Citizens, Smart Government, Smart Economy, and Smart Society. </p>
                             <ul class="list-unstyled about-one__points">
                                 <li>
                                     <div class="icon">
@@ -117,7 +119,7 @@
                             </ul>
                             <div class="about-one__btn-and-ceo">
                                 <div class="about-one__btn-box">
-                                    <a href="{{ url('home.about') }}" class="thm-btn about-one__btn">About More <i
+                                    <a href="{{ url('home') }}" class="thm-btn about-one__btn">About More <i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                                 <div class="about-one__ceo">
@@ -161,210 +163,6 @@
         <!--Services One Start-->
         @include('home.services')
         <!--Services One End-->
-
-        <!--Unbeatable One Start-->
-        <section class="unbeatable-one">
-            <div class="unbeatable-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style="background-image: url(assets/images/backgrounds/unbeatable-one-bg.jpg);"></div>
-            <div class="container">
-                <div class="text-center unbeatable-one__inner">
-                    <div class="unbeatable-one__content">
-                        <div class="unbeatable-one__shape-one wow slideInLeft" data-wow-delay="100ms"
-                            data-wow-duration="2500ms">
-                            <img src="assets/images/shapes/unbeatable-shape-1.png" alt="" class="float-bob-y">
-                        </div>
-                        <div class="unbeatable-one__shape-two wow slideInRight" data-wow-delay="100ms"
-                            data-wow-duration="2500ms">
-                            <img src="assets/images/shapes/unbeatable-shape-2.png" alt="" class="float-bob-y">
-                        </div>
-                        <p class="unbeatable-one__tagline">We’re Selling Healthy Products</p>
-                        <h3 class="unbeatable-one__title">Unbeatable Organic and
-                            <br> Agriculture Services</h3>
-                        <div class="unbeatable-one__btn-box">
-                            <a href="{{ url('home.about') }}" class="thm-btn unbeatable-one__btn">Discover More <i
-                                    class="icon-right-arrow"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Unbeatable One End-->
-
-        <!--Healthey Food One Start-->
-        <section class="healthy-food-one">
-            <div class="healthy-food-one__bg float-bob-x"
-                style="background-image: url(assets/images/shapes/healthy-food-one-shape-1.png);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="healthy-food-one__left">
-                            <div class="healthy-food-one__img">
-                                <img src="assets/images/resources/healthy-food-one-1.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="healthy-food-one__right">
-                            <div class="text-left section-title">
-                                <span class="section-title__tagline">Pure Organic Food</span>
-                                <h2 class="section-title__title">Healthy food for your good
-                                    growth</h2>
-                                <div class="section-title__icon">
-                                    <img src="assets/images/icon/section-title-icon-1.png" alt="">
-                                </div>
-                            </div>
-                            <p class="healthy-food-one__text">Lorem ipsum dolor sit amet nsectetur cing elit. Suspe
-                                ndisse suscipit sagittis leo sit met entum estibu dignissim posuere cubilia durae. Leo
-                                sit met entum cubilia crae onec.</p>
-                            <ul class="list-unstyled healthy-food-one__list">
-                                <li class="healthy-food-one__single">
-                                    <div class="healthy-food-one__content">
-                                        <div class="healthy-food-one__icon">
-                                            <span class="icon-harvester"></span>
-                                        </div>
-                                        <p class="healthy-food-one__title">Harvesting</p>
-                                    </div>
-                                </li>
-                                <li class="healthy-food-one__single">
-                                    <div class="healthy-food-one__content">
-                                        <div class="healthy-food-one__icon">
-                                            <span class="icon-agriculture-1"></span>
-                                        </div>
-                                        <p class="healthy-food-one__title">Growth</p>
-                                    </div>
-                                </li>
-                                <li class="healthy-food-one__single">
-                                    <div class="healthy-food-one__content">
-                                        <div class="healthy-food-one__icon">
-                                            <span class="icon-harvest-1"></span>
-                                        </div>
-                                        <p class="healthy-food-one__title">Maintenance</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Healthey Food One End-->
-
-
-        <!--Call One Start-->
-        <section class="call-one">
-            <div class="container">
-                <div class="call-one__inner wow fadeInUp" data-wow-delay="100ms">
-                    <div class="call-one__left">
-                        <h3 class="call-one__content">Healthy products</h3>
-                        <div class="call-one__icon">
-                            <span class="icon-phone-ringing"></span>
-                        </div>
-                    </div>
-                    <div class="call-one__right">
-                        <div class="call-one__contact-info">
-                            <p>Lorem ipsum dolor sit am cons sid</p>
-                            <a href="tel:12463330088">+ 1- (246) 333-0088</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Call One End-->
-
-        <!--Project One Start-->
-        @include('home.project')
-        <!--Project One End-->
-
-        <!--Contact One Start-->
-        <section class="contact-one">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="contact-one__left">
-                            <div class="text-left section-title">
-                                <span class="section-title__tagline">Contact Now</span>
-                                <h2 class="section-title__title">Get in touch now</h2>
-                                <div class="section-title__icon">
-                                    <img src="assets/images/icon/section-title-icon-1.png" alt="">
-                                </div>
-                            </div>
-                            <p class="contact-one__text">Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse
-                                platea dictumst. Duis porta, <br> quam ut finibus ultrices.</p>
-                            <ul class="list-unstyled contact-one__contact-list">
-                                <li>
-                                    <div class="icon">
-                                        <span class="fas fa-phone-alt"></span>
-                                    </div>
-                                    <div class="content">
-                                        <p>Have Question?</p>
-                                        <h4><a href="tel:9288009850">Free +92 (8800)-9850</a></h4>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <span class="fas fa-envelope"></span>
-                                    </div>
-                                    <div class="content">
-                                        <p>Write Email</p>
-                                        <h4><a href="mailto:needhelp@company.com">needhelp@company.com</a></h4>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <span class="fas fa-map-marker"></span>
-                                    </div>
-                                    <div class="content">
-                                        <p>Visit Now</p>
-                                        <h4>88 Broklyn Golden Street. USA</h4>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="contact-one__right">
-                            <div class="contact-one__bg float-bob-x"
-                                style="background-image: url(assets/images/shapes/contact-one-shape-1.png);"></div>
-                            <div class="row">
-                                <div class="contact-one__form-box">
-                                    <form action="https://pixydrops.com/agrionhtml/main-html/assets/inc/sendemail.php"
-                                        class="contact-one__form contact-one-validated" novalidate="novalidate">
-                                        <div class="row">
-                                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                                <div class="contact-one__input-box">
-                                                    <input type="text" placeholder="Your Name" name="name">
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                                <div class="contact-one__input-box">
-                                                    <input type="email" placeholder="Email Address" name="email">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xl-12">
-                                                <div class="contact-one__input-box text-message-box">
-                                                    <textarea name="message" placeholder="Write a Message"></textarea>
-                                                </div>
-                                                <div class="contact-one__btn-box">
-                                                    <a href="{{ url('home.about') }}" class="thm-btn contact-one__btn">Send a Message
-                                                        <i class="icon-right-arrow"></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Contact One End-->
-
-        <!--Blog One Start-->
-        @include('home.blog')
-        <!--Blog One End-->
 
         <!--Site Footer Start-->
       @include('home.footer')

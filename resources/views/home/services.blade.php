@@ -22,10 +22,9 @@
                         </div>
                     </div>
                     <div class="services-one__content">
-                        <h3 class="services-one__title"><a href="agriculture-products.html">Agriculture <br>
+                        <h3 class="services-one__title"><a>Agriculture <br>
                                 Products</a></h3>
-                        <p class="services-one__text">I was impresed by the Farmer Buddy services, not lorem ipsum is
-                            simply free text.</p>
+                        <p class="services-one__text">I was impresed by the Farmer Buddy services.</p>
                     </div>
                 </div>
             </div>
@@ -42,10 +41,9 @@
                         </div>
                     </div>
                     <div class="services-one__content">
-                        <h3 class="services-one__title"><a href="organic-products.html">Organic
+                        <h3 class="services-one__title"><a>Seasonal
                                 <br> Products</a></h3>
-                        <p class="services-one__text">I was impresed by the Farmer Buddy services, not lorem ipsum is
-                            simply free text.</p>
+                        <p class="services-one__text">I was impresed by the Farmer Buddy services</p>
                     </div>
                 </div>
             </div>
@@ -62,10 +60,9 @@
                         </div>
                     </div>
                     <div class="services-one__content">
-                        <h3 class="services-one__title"><a href="fresh-vegetables.html">Fresh
+                        <h3 class="services-one__title"><a>Fresh
                                 <br> Vegetables</a></h3>
-                        <p class="services-one__text">I was impresed by the Farmer Buddy services, not lorem ipsum is
-                            simply free text.</p>
+                        <p class="services-one__text">I was impresed by the Farmer Buddy services</p>
                     </div>
                 </div>
             </div>
@@ -82,10 +79,9 @@
                         </div>
                     </div>
                     <div class="services-one__content">
-                        <h3 class="services-one__title"><a href="dairy-products.html">Dairy <br> Products</a>
+                        <h3 class="services-one__title"><a>Dairy <br> Products</a>
                         </h3>
-                        <p class="services-one__text">I was impresed by the Farmer Buddy services, not lorem ipsum is
-                            simply free text.</p>
+                        <p class="services-one__text">I was impresed by the Farmer Buddy services</p>
                     </div>
                 </div>
             </div>

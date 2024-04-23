@@ -22,127 +22,7 @@
 
 
     <div class="page-wrapper">
-        <header class="main-header">
-            <div class="main-header__wrapper">
-                <div class="main-header__wrapper-inner">
-                    <div class="main-header__logo">
-                        <a href="{{ url('/') }}"><img src="assets/images/resources/logo-1.png" alt=""></a>
-                    </div>
-                    <div class="main-header__menu-box">
-                        
-                        <div class="main-header__menu-box-bottom">
-                            <nav class="main-menu">
-                                <div class="main-menu__wrapper">
-                                    <div class="main-menu__wrapper-inner">
-                                        <div class="main-menu__left">
-                                            <div class="main-menu__main-menu-box">
-                                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                                                <ul class="main-menu__list">
-                                                    <li class="dropdown megamenu">
-                                                        <a href="{{ url('/') }}">Home </a>
-                                                        
-                                                    </li>
-                                                    <li class="current">
-                                                        <a href="{{ url('/about') }}">About</a>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Services</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="services.html">Services</a>
-                                                            </li>
-                                                            <li><a href="services-carousel.html">Services Carousel</a>
-                                                            </li>
-                                                            <li><a href="agriculture-products.html">Agriculture
-                                                                    Products</a></li>
-                                                            <li><a href="organic-products.html">Organic Products</a>
-                                                            </li>
-                                                            <li><a href="fresh-vegetables.html">Fresh Vegetables</a>
-                                                            </li>
-                                                            <li><a href="dairy-products.html">Dairy Products</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Projects</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="project-01.html">Projects 01</a></li>
-                                                            <li><a href="project-02.html">Projects 02</a></li>
-                                                            <li><a href="project-carousel.html">Project Carousel</a>
-                                                            </li>
-                                                            <li><a href="project-details.html">Project Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Pages</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="{{ url('expert') }}">Expert</a></li>
-                                                            <li><a href="farmers-carousel.html">Farmers Carousel</a>
-                                                            </li>
-                                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                                            <li><a href="testimonials-carousel.html">Testimonial
-                                                                    Carousel</a></li>
-                                                            <li><a href="faq.html">FAQs</a></li>
-                                                            <li><a href="404.html">404 Error</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Blog</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="blog.html">Blog</a></li>
-                                                            <li><a href="blog-carousel.html">Blog Carousel</a></li>
-                                                            <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown">
-                                                        <a href="#">Shop</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="products.html">Products</a></li>
-                                                            <li><a href="product-details.html">Product Details</a></li>
-                                                            <li><a href="cart.html">Cart</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="contact.html">Contact</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="main-menu__right">
-                                            <div class="main-menu__search-cart-btn-box">
-                                                <div class="main-menu__search-box">
-                                                    <a href="#"
-                                                        class="main-menu__search search-toggler icon-magnifying-glass"></a>
-                                                </div>
-                                                <div class="main-menu__cart-box">
-                                                    <a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
-                                                </div>
-                                                <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
-                                                        <i class="icon-right-arrow"></i> </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="main-header__phone-contact-box">
-                        <div class="main-header__phone-number">
-                            <a href="tel:9200886823">+92 (0088) 6823</a>
-                        </div>
-                        <div class="main-header__call-box">
-                            <div class="main-header__call-inner">
-                                <div class="main-header__call-icon">
-                                    <span class="fas fa-phone"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        @include('home.header')
 
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
@@ -155,7 +35,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{ url('/') }}">Home</a></li>
                         <li><span>/</span></li>
                         <li>About</li>
                     </ul>
@@ -211,7 +91,7 @@
                                         <p class="icon-box-text">Magnis Dis Nascet</p>
                                     </div>
                                     <div class="content">
-                                        <p>Lorem ipsum is free do sited</p>
+                                        <p>Farmers will be able to use effective methods for pest prevention</p>
                                     </div>
                                 </li>
                                 <li>
@@ -220,7 +100,7 @@
                                         <p class="icon-box-text">Libro id Edge</p>
                                     </div>
                                     <div class="content">
-                                        <p>Lorem ipsum is free do sited</p>
+                                        <p>Farmers will be able to use a Precise amount of fertilizer </p>
                                     </div>
                                 </li>
                             </ul>
@@ -233,14 +113,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="about-three__progress-single">
-                                    <h4 class="about-three__progress-title">Organic</h4>
-                                    <div class="bar marb-0">
-                                        <div class="bar-inner count-bar" data-percent="68%">
-                                            <div class="count-text">68%</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -274,8 +147,8 @@
                     <div class="Provide-One__content">
                         <div class="text-left section-title">
                             <span class="section-title__tagline">Our Beneifts</span>
-                            <h2 class="section-title__title">pROVIDING HIGH QUALITY
-                                PRODUCTS</h2>
+                            <h2 class="section-title__title">PROVIDING SUPPORTIVE SERVICES
+                                </h2>
                             <div class="section-title__icon">
                                 <img src="assets/images/icon/section-title-icon-1.png" alt="">
                             </div>
@@ -294,17 +167,7 @@
                                     <h3>acurate <br> suggestions</h3>
                                 </div>
                             </div>
-                            <div class="Provide-One__progress">
-                                <div class="Provide-One__progress-box">
-                                    <div class="circle-progress"
-                                        data-options='{ "value": 0.5,"thickness": 3,"emptyFill": "#36731f","lineCap": "square", "size": 108, "fill": { "color": "#ffcd1e" } }'>
-                                    </div><!-- /.circle-progress -->
-                                    <span>66%</span>
-                                </div><!-- /.about-five__progress-box -->
-                                <div class="Provide-One__progress-content">
-                                    <h3>Quality <br> products</h3>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -443,202 +306,7 @@
         <!--Team One End-->
 
         <!--Testimonial Three Start-->
-        <section class="testimonial-three">
-            <div class="testimonial-three__shape-1"
-                style="background-image: url(assets/images/shapes/testimonial-three-shape-1.png);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4">
-                        <div class="testimonial-three__left">
-                            <div class="text-left section-title">
-                                <span class="section-title__tagline">Our Testimonials</span>
-                                <h2 class="section-title__title">What They’re taking about farmer buddy</h2>
-                                <div class="section-title__icon">
-                                    <img src="assets/images/icon/section-title-icon-1.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-8">
-                        <div class="testimonial-three__right">
-                            <div class="testimonial-three__carousel thm-owl__carousel owl-theme owl-carousel"
-                                data-owl-options='{
-                                "items": 3,
-                                "margin": 30,
-                                "smartSpeed": 700,
-                                "loop":true,
-                                "autoplay": 6000,
-                                "nav":true,
-                                "dots":false,
-                                "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
-                                "responsive":{
-                                    "0":{
-                                        "items":1
-                                    },
-                                    "768":{
-                                        "items":2
-                                    },
-                                    "992":{
-                                        "items": 2
-                                    }
-                                }
-                            }'>
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Sarah Albert</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img src="assets/images/testimonial/testimonial-1-2.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Kevin Martin</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img src="assets/images/testimonial/testimonial-1-3.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Aleesha Brown</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img src="assets/images/testimonial/testimonial-1-4.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Mike Hardson</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img src="assets/images/testimonial/testimonial-1-5.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">Jolie Michale</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text">Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
-                                            <div class="testimonial-one__client-info">
-                                                <div class="testimonial-one__client-img">
-                                                    <img src="assets/images/testimonial/testimonial-1-6.jpg" alt="">
-                                                    <div class="testimonial-one__quote">
-                                                        <span class="icon-quote"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-one__client-details-box">
-                                            <div class="testimonial-one__client-details">
-                                                <h4 class="testimonial-one__client-name">David Smith</h4>
-                                                <p class="testimonial-one__client-sub-title">Customer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <!--Testimonial Three End-->
 
         <!--Cta One Start-->
@@ -657,7 +325,7 @@
                                 </h3>
                             </div>
                             <div class="cta-one__right">
-                                <a href="about.html" class="thm-btn cta-one__btn">Discover More <i
+                                <a href="{{ url('about') }}" class="thm-btn cta-one__btn">Discover More <i
                                         class="icon-right-arrow"></i> </a>
                             </div>
                         </div>

@@ -24,10 +24,9 @@
                           </div>
                           <ul class="footer-widget__Explore-list list-unstyled">
                               <li><a href="about.html">About</a></li>
-                              <li><a href="farmers.html">Our Farmers</a></li>
-                              <li><a href="project-01.html">New Projects</a></li>
+                              <li><a href="{{ url('expert') }}">Our Experts</a></li>
                               <li><a href="services.html">Services</a></li>
-                              <li><a href="contact.html">Contact</a></li>
+                              <li><a href="{{ url('contact') }}">Contact</a></li>
                           </ul>
                       </div>
                   </div>
@@ -42,11 +41,11 @@
                                       <img src="assets/images/resources/footer-widget-news-img-1.jpg" alt="">
                                   </div>
                                   <div class="footer-widget__news-content">
-                                      <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                      <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                              Organic Food
+                                      <p class="footer-widget__news-date">20 April, 2024</p>
+                                      <h5 class="footer-widget__news-sub-title"><a href="{{ url('blog') }}">A
+                                              Blog
                                               Gives
-                                              More Good Taste</a></h5>
+                                              More Information</a></h5>
                                   </div>
                               </li>
                               <li>
@@ -54,11 +53,11 @@
                                       <img src="assets/images/resources/footer-widget-news-img-2.jpg" alt="">
                                   </div>
                                   <div class="footer-widget__news-content">
-                                      <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                      <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                              Organic Food
-                                              Gives
-                                              More Good Taste</a></h5>
+                                      <p class="footer-widget__news-date">22 April, 2024</p>
+                                      <h5 class="footer-widget__news-sub-title"><a href="{{ url('blog') }}">A
+                                        Blog
+                                        Gives
+                                        More Information</a></h5>
                                   </div>
                               </li>
                           </ul>
@@ -75,7 +74,7 @@
                                       <span class="fas fa-phone-square-alt"></span>
                                   </div>
                                   <div class="text">
-                                      <p><a href="tel:9200886823">+92 (0088) 6823</a></p>
+                                      <p><a href=" ">+92 (0088) 6823</a></p>
                                   </div>
                               </li>
                               <li>
@@ -83,25 +82,12 @@
                                       <span class="fas fa-envelope"></span>
                                   </div>
                                   <div class="text">
-                                      <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                      <p><a>needhelp@company.com</a></p>
                                   </div>
                               </li>
-                              <li>
-                                  <div class="icon">
-                                      <span class="icon-pin"></span>
-                                  </div>
-                                  <div class="text">
-                                      <p>80 Broklyn Golden Street. USA</p>
-                                  </div>
-                              </li>
+                              
                           </ul>
-                          <form class="footer-widget__Contact-form">
-                              <div class="footer-widget__Contact-input-box">
-                                  <input type="email" placeholder="Email Address" name="email">
-                                  <button type="submit" class="footer-widget__Contact-btn"><i
-                                          class="icon-right-arrow"></i></button>
-                              </div>
-                          </form>
+                          
                       </div>
                   </div>
               </div>

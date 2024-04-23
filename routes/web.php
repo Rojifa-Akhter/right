@@ -89,7 +89,7 @@ Route::post('/addBooking/{id}',[HomeController::class,'addBooking']);
 
 //blog for user
 Route::get('/blog', [HomeController::class, 'blog']);
-Route::get('/blog_details/{id}', [HomeController::class, 'blog_details'])->middleware('auth');;
+Route::get('/blog_details/{id}', [HomeController::class, 'blog_details'])->middleware('auth');
 Route::get('/createBlog', [HomeController::class, 'createBlog'])->middleware('auth');
 Route::post('/userBlog', [HomeController::class, 'userBlog'])->middleware('auth');
 Route::get('/myBlog', [HomeController::class, 'myBlog']);
@@ -117,7 +117,7 @@ Route::get('/chat{key?}',Main::class)->name('chat');
 
 // weather
 // Route::get('/weather',[WeatherController::class, "index"])->('weather.form');
-Route::match(["get","post"],"weather",[WeatherController::class, "index"])->name("weather.form");
+Route::match(["get","post"],"weather",[WeatherController::class, "index"])->name("weather.form")->middleware('auth');
 
 // soil managemnet
 Route::get('/soils', [SoilController::class, 'index'])->name('soil_list');

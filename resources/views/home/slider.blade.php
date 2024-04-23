@@ -23,10 +23,10 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="main-slider__content">
-                                <p class="main-slider__sub-title">We are Producing Natural Products</p>
+                                <p class="main-slider__sub-title">We are suggested Natural Products</p>
                                 <h2 class="main-slider__title">Agriculture.</h2>
                                 <div class="main-slider__btn-box">
-                                    <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
+                                    <a href="{{ url('about') }}" class="thm-btn main-slider__btn">Discover More <i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                             </div>
@@ -43,10 +43,10 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="main-slider__content">
-                                <p class="main-slider__sub-title">We are Producing Natural Products</p>
+                                <p class="main-slider__sub-title">We are Suggested Natural Products</p>
                                 <h2 class="main-slider__title">Agriculture.</h2>
                                 <div class="main-slider__btn-box">
-                                    <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
+                                    <a href="{{ url('about') }}" class="thm-btn main-slider__btn">Discover More <i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                             </div>
@@ -63,10 +63,10 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="main-slider__content">
-                                <p class="main-slider__sub-title">We are Producing Natural Products</p>
+                                <p class="main-slider__sub-title">We are Suggested Natural Products</p>
                                 <h2 class="main-slider__title">Agriculture.</h2>
                                 <div class="main-slider__btn-box">
-                                    <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
+                                    <a href=href="{{ url('') }}" class="thm-btn main-slider__btn">Discover More <i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                             </div>
