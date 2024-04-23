@@ -52,7 +52,7 @@ class HomeController extends Controller
     //for blog
     public function blog()
     {
-        $blog = Post::all();
+        $blog = Post::where('post_status','=','active')->get();
         return view('home.blog', compact('blog'));
     }
     public function blog_details($id)

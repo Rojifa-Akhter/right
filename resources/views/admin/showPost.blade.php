@@ -42,6 +42,7 @@
                                     <th>Post Status</th>
                                     <th>User Type</th>
                                     <th>Image</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                   </tr>
                                   </thead>
@@ -56,7 +57,13 @@
                               <td>{{ $post->post_status}}</td>
                               <td>{{ $post->usertype}}</td>
                               <td><img src="/postimage/{{ $post->image }}" alt=""></td>
-                             
+                              <td>
+                                <a href="{{ url('acceptPost',$post->id) }}" onclick="return confirm('Are you sure you want to accept this?')">
+                                  <button type="button" class="btn btn-outline-secondary">Status Accept</button></a>
+                                <a href="{{ url('rejectPost',$post->id) }}" onclick="return confirm('Are you sure you want to reject this?')">
+                                  <button type="button" class="btn btn-primary">Status Reject</button></a>
+                                
+                            </td>
                               <td>
                                 {{-- <!-- {{--api key== AIzaSyB8WOJ3uAOTaeJSwR7gmnCii7_tLVBJDf4 --}}
                                 {{-- <a href=""><button type="button" class="btn btn-sm btn-primary">View</button></a> --}}

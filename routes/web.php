@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/',[AdminController::class,'home'])->middleware('auth');
+Route::get('/',[AdminController::class,'home']);
 
 //expert
 Route::get('/createExpert', [AdminController::class, 'createExpert']);
@@ -52,6 +52,8 @@ Route::get('/showPost',[AdminController::class,'showPost']);
 Route::get('/editPost/{id}',[AdminController::class,'editPost']);
 Route::post('/updatePost/{id}',[AdminController::class,'updatePost']);
 Route::get('/deletePost/{id}', [AdminController::class, 'deletePost']);
+Route::get('/acceptPost/{id}', [AdminController::class, 'acceptPost']);
+Route::get('/rejectPost/{id}', [AdminController::class, 'rejectPost']);
 
 //blog details for admin
 
@@ -76,9 +78,9 @@ Route::post('/addBooking/{id}',[HomeController::class,'addBooking']);
 
 //blog for user
 Route::get('/blog', [HomeController::class, 'blog']);
-Route::get('/blog_details/{id}', [HomeController::class, 'blog_details']);
+Route::get('/blog_details/{id}', [HomeController::class, 'blog_details'])->middleware('auth');;
 Route::get('/createBlog', [HomeController::class, 'createBlog'])->middleware('auth');
-Route::post('/userBlog', [HomeController::class, 'userBlog']);
+Route::post('/userBlog', [HomeController::class, 'userBlog'])->middleware('auth');
 Route::get('/myBlog', [HomeController::class, 'myBlog']);
 Route::get('/delete_myBlog/{id}', [HomeController::class, 'delete_myBlog']);
 Route::get('/edit_myBlog/{id}',[HomeController::class,'edit_myBlog']);

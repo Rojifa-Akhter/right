@@ -20,6 +20,7 @@ class AdminController extends Controller
 
 
         if (Auth::id()) {
+            $post = Post::where('post_status', '=', 'active')->get();
 
             $usertype = Auth()->user()->usertype;
 
@@ -140,7 +141,7 @@ class AdminController extends Controller
     }
     public function addPost(Request $request)
     {
-        $user=Auth()->user();
+        $user = Auth()->user();
         $user_id = $user->id;
         $name = $user->name;
         $usertype = $user->usertype;
@@ -164,19 +165,19 @@ class AdminController extends Controller
         }
 
         $post->save();
-        return redirect()->back()->with('message','Post Added successfulle');
+        return redirect()->back()->with('message', 'Post Added successfulle');
     }
     public function showPost()
     {
         $post = Post::all();
-        return view('admin.showPost' , compact('post'));
+        return view('admin.showPost', compact('post'));
     }
     public function deletePost($id)
     {
         $post = Post::find($id);
 
         $post->delete();
-        return redirect()->back()->with('message','Post Delete Successfully');
+        return redirect()->back()->with('message', 'Post Delete Successfully');
     }
     public function editPost($id)
     {
@@ -198,13 +199,30 @@ class AdminController extends Controller
 
         $post->title = $request->title;
         $post->save();
-        return redirect()->back()->with('message','Post Update Successfully');
+        return redirect()->back()->with('message', 'Post Update Successfully');
     }
+    public function acceptPost($id)
+    {
+        $data = Post::find($id);
+
+        $data->post_status='active';
+        $data->save();
+        return redirect()->back()->with('message', 'Post Status Changed to Active');
+    }
+    public function rejectPost($id)
+    {
+        $data = Post::find($id);
+
+        $data->post_status='rejected';
+        $data->save();
+        return redirect()->back()->with('message', 'Post Status Changed to Rejected');
+    }
+
     //blog
     public function blogDetails()
     {
         $dblog = blogDetails::all();
-        return view('admin.blogDetails' , compact('dblog'));
+        return view('admin.blogDetails', compact('dblog'));
     }
     public function postBlog()
     {
@@ -212,7 +230,7 @@ class AdminController extends Controller
     }
     public function addBlog(Request $request)
     {
-        $user=Auth()->user();
+        $user = Auth()->user();
         $user_id = $user->id;
         $name = $user->name;
         $usertype = $user->usertype;
@@ -236,14 +254,14 @@ class AdminController extends Controller
         }
 
         $dblog->save();
-        return redirect()->back()->with('message','Blog Details Added successfulle');
+        return redirect()->back()->with('message', 'Blog Details Added successfulle');
     }
     public function deleteBlog($id)
     {
         $dblog = blogDetails::find($id);
 
         $dblog->delete();
-        return redirect()->back()->with('message','Post Delete Successfully');
+        return redirect()->back()->with('message', 'Post Delete Successfully');
     }
     public function editBlog($id)
     {
@@ -266,6 +284,6 @@ class AdminController extends Controller
         $dblog->title = $request->title;
         $dblog->description = $request->description;
         $dblog->save();
-        return redirect()->back()->with('message','Post Update Successfully');
+        return redirect()->back()->with('message', 'Post Update Successfully');
     }
 }
