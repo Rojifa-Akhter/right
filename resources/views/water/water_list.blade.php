@@ -24,9 +24,9 @@
                 </div>
                     
                 @endif
-        <h1 class="mt-5 mb-4">Soil List</h1>
+        <h1 class="mt-5 mb-4">Water Information</h1>
         <div class="col-md-1">
-            <a style="" href="{{ route('soil_add') }}"><button type="button" class="btn btn-block btn-primary">Add</button></a>
+            <a style="" href="{{ route('water_add') }}"><button type="button" class="btn btn-block btn-primary">Add</button></a>
         </div>
         <div class="mb-3 input-group">
             <form action="" method="post" class="form-inline">
@@ -35,37 +35,29 @@
                     <div class="card-body">
                         <table id="example2" class="table table-bordered table-hover">
                           <thead>
-                          <tr> 
-                            <th>Id</th>                        
-                            <th>Soil Type</th>
-                            <th>PH</th>
-                            <th>Nitrogen</th>
-                            <th>Phosphorus</th>
-                            <th>Potassium</th>
-                            <th>Magnesium</th>
-                            <th>Calcium</th>
+                          <tr>                        
+                            <th>Source Name</th>
+                            <th>Capacity</th>
+                            <th>Quantity</th>
+                            <th>Date</th>
                             <th>Action</th>
                           </tr>
                           </thead>
                           <tbody>
                             <?php 
-                if(!empty($soils)){
-                foreach($soils as $com){  ?>
+                if(!empty($water)){
+                foreach($water as $com){  ?>
                     <tr>
                       <td>{{ $com->id}}</td>
-                      <td>{{ $com->soil_type}}</td>
-                      <td>{{ $com->pH}}</td>
-                      <td>{{ $com->nitrogen}}</td>
-                      <td>{{ $com->phosphorus}}</td>
-                      <td>{{ $com->potassium}}</td>
-                      <td>{{ $com->magnesium}}</td>
-                      <td>{{ $com->calcium}}</td>
-                      
-                     
+                      <td>{{ $com->source_name}}</td>
+                      <td>{{ $com->capacity}}</td>
+                      <td>{{ $com->quantity}}</td>
+                      <td>{{ $com->date}}</td>
+                    
                       <td>
-                        <a href="{{route('view_soil', $com->id)}}"><button type="button" class="btn btn-sm btn-primary">View</button></a>
-                        <a href="{{route('edit_soil', $com->id)}}"><button type="button" class="btn btn-sm btn-success">Edit</button></a>
-                        <a href="{{ route('delete_soil', ['id' => $com->id]) }}" onclick="return confirm('Are you sure you want to delete this?')">Delete</a>
+                        <a href="{{route('view_water', $com->id)}}"><button type="button" class="btn btn-sm btn-primary">View</button></a>
+                        <a href="{{route('edit_water', $com->id)}}"><button type="button" class="btn btn-sm btn-success">Edit</button></a>
+                        <a href="{{ route('delete_water', ['id' => $com->id]) }}" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
 
                     </td>
                     </tr>
@@ -79,9 +71,8 @@
                         </table>
                 </div>
             </form>
-        
+
         </div>
-               
     </div>
 
   

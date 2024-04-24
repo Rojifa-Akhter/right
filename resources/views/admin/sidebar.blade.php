@@ -28,7 +28,7 @@
                 <li class="nav-item"> <a class="nav-link" href="{{ url('locations') }}">Location</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{ url('seasons') }}">Season</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{ url('soils') }}">Soil</a></li>
-                <li class="nav-item"> <a class="nav-link" href="{{ url('fields') }}">Field</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('water') }}">Water</a></li>
 
               </ul>
             </div>

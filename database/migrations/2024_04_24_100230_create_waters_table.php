@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFieldsTable extends Migration
+class CreateWatersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateFieldsTable extends Migration
      */
     public function up()
     {
-        Schema::create('fields', function (Blueprint $table) {
+        Schema::create('waters', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            // $table->float('location_id');
-            $table->float('area');
+            $table->string('source_name');
+            $table->string('capacity');
+            $table->string('quantity');
+            $table->date('date');
             $table->timestamps();
-
-            // $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
-
         });
     }
 
@@ -32,6 +30,6 @@ class CreateFieldsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fields');
+        Schema::dropIfExists('waters');
     }
 }

@@ -7,12 +7,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ExpertController;
 use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\WaterController;
 
 use App\Http\Controllers\SoilController;
-use App\Http\Controllers\FieldController;
 use App\Http\Controllers\SeasonController;
-use App\Http\Controllers\WaterSourceController;
-use App\Http\Controllers\WaterUsageController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\CropController;
 use App\Models\Expert;
@@ -136,17 +134,6 @@ Route::get('/edit_soil{id}', [SoilController::class, 'edit_soil'])->name('edit_s
 Route::post('/update_soil', [SoilController::class, 'update'])->name('update_soil');
 Route::get('/delete_soil/{id}', [SoilController::class, 'destroy'])->name('delete_soil');
 
-
-// field
-Route::get('/fields', [FieldController::class, 'index'])->name('field_list');
-//add-edit-delete
-Route::post('/add_field_action', [FieldController::class, 'store'])->name('field_add_action');
-Route::get('/add_field', [FieldController::class, 'add_field'])->name('field_add');
-Route::get('/view_field{id}', [FieldController::class, 'view_field'])->name('view_field');
-Route::get('/edit_field{id}', [FieldController::class, 'edit_field'])->name('edit_field');
-Route::post('/update_field', [FieldController::class, 'update'])->name('update_field');
-Route::get('/delete_field/{id}', [FieldController::class, 'destroy'])->name('delete_field');
-
 // season managemnet
 Route::get('/seasons', [SeasonController::class, 'index'])->name('season_list');
 //add-edit-delete
@@ -158,24 +145,14 @@ Route::post('/update_season', [SeasonController::class, 'update'])->name('update
 Route::get('/delete_season/{id}', [SeasonController::class, 'destroy'])->name('delete_season');
 
 // waterSource 
-Route::get('/waterSources', [WaterSourceController::class, 'index'])->name('waterSource_list');
+Route::get('/water', [WaterController::class, 'index'])->name('water_list');
 //add-edit-delete
-Route::post('/add_waterSource_action', [WaterSourceController::class, 'store'])->name('waterSource_add_action');
-Route::get('/add_waterSource', [WaterSourceController::class, 'add_waterSource'])->name('waterSource_add');
-Route::get('/view_waterSource{id}', [WaterSourceController::class, 'view_waterSource'])->name('view_waterSource');
-Route::get('/edit_waterSource{id}', [WaterSourceController::class, 'edit_waterSource'])->name('edit_waterSource');
-Route::post('/update_waterSource', [WaterSourceController::class, 'update'])->name('update_waterSource');
-Route::get('/delete_waterSource/{id}', [WaterSourceController::class, 'destroy'])->name('delete_waterSource');
-
-// waterUsage 
-Route::get('/waterUsages', [WaterUsageController::class, 'index'])->name('waterUsage_list');
-//add-edit-delete
-Route::post('/add_waterUsage_action', [WaterUsageController::class, 'store'])->name('waterUsage_add_action');
-Route::get('/add_waterUsage', [WaterUsageController::class, 'add_waterUsage'])->name('waterUsage_add');
-Route::get('/view_waterUsage{id}', [WaterUsageController::class, 'view_waterUsage'])->name('view_waterUsage');
-Route::get('/edit_waterUsage{id}', [WaterUsageController::class, 'edit_waterUsage'])->name('edit_waterUsage');
-Route::post('/update_waterUsage', [WaterUsageController::class, 'update'])->name('update_waterUsage');
-Route::get('/delete_waterUsage/{id}', [WaterUsageController::class, 'destroy'])->name('delete_waterUsage');
+Route::post('/add_water_action', [WaterController::class, 'store'])->name('water_add_action');
+Route::get('/add_water', [WaterController::class, 'add_water'])->name('water_add');
+Route::get('/view_water{id}', [WaterController::class, 'view_water'])->name('view_water');
+Route::get('/edit_water{id}', [WaterController::class, 'edit_water'])->name('edit_water');
+Route::post('/update_water', [WaterController::class, 'update'])->name('update_water');
+Route::get('/delete_water/{id}', [WaterController::class, 'destroy'])->name('delete_water');
 
 //location
 Route::get('/locations', [LocationController::class, 'index'])->name('location_list');
