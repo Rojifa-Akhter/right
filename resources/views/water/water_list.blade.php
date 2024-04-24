@@ -55,7 +55,7 @@
                       <td>{{ $com->date}}</td>
                     
                       <td>
-                        <a href="{{route('view_water', $com->id)}}"><button type="button" class="btn btn-sm btn-primary">View</button></a>
+                        {{-- <a href="{{route('view_water', $com->id)}}"><button type="button" class="btn btn-sm btn-primary">View</button></a> --}}
                         <a href="{{route('edit_water', $com->id)}}"><button type="button" class="btn btn-sm btn-success">Edit</button></a>
                         <a href="{{ route('delete_water', ['id' => $com->id]) }}" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
 

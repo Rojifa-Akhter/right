@@ -17,7 +17,17 @@ class CreateCropsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
+            $table->unsignedBigInteger('location_id');
+            $table->unsignedBigInteger('soil_id');
+            $table->unsignedBigInteger('water_id');
+            $table->unsignedBigInteger('season_id');
             $table->timestamps();
+
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
+            $table->foreign('soil_id')->references('id')->on('soils')->onDelete('cascade');    
+            $table->foreign('water_id')->references('id')->on('waters')->onDelete('cascade');    
+            $table->foreign('season_id')->references('id')->on('seasons')->onDelete('cascade');    
+   
         });
     }
 
@@ -31,3 +41,9 @@ class CreateCropsTable extends Migration
         Schema::dropIfExists('crops');
     }
 }
+
+
+
+
+
+

@@ -13,6 +13,7 @@ use App\Http\Controllers\SoilController;
 use App\Http\Controllers\SeasonController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\CropController;
+use App\Models\Crop;
 use App\Models\Expert;
 use Illuminate\Support\Facades\Route;
 
@@ -164,13 +165,13 @@ Route::post('/update_location', [LocationController::class, 'update'])->name('up
 Route::get('/delete_location/{id}', [LocationController::class, 'destroy'])->name('delete_location');
 
 //crop
-Route::get('/crops', [CropController::class, 'index'])->name('crop_list');
-Route::post('/add_crop_action', [CropController::class, 'store'])->name('crop_add_action');
-Route::get('/add_crop', [CropController::class, 'add_crop'])->name('crop_add');
-Route::get('/view_crop{id}', [CropController::class, 'view_crop'])->name('view_crop');
-Route::get('/edit_crop{id}', [CropController::class, 'edit_crop'])->name('edit_crop');
-Route::post('/update_crop', [CropController::class, 'update'])->name('update_crop');
-Route::get('/delete_crop/{id}', [CropController::class, 'destroy'])->name('delete_crop');
+Route::get('/crop', [CropController::class, 'index'])->name('crop_list');
+Route::post('/addCrop_action', [CropController::class, 'store'])->name('addCrop_action');
+Route::get('/addCrop', [CropController::class, 'add'])->name('addCrop');
+Route::get('/editCrop{id}', [CropController::class, 'editCrop'])->name('editCrop');
+Route::post('/updateCrop', [CropController::class, 'update'])->name('updateCrop');
+Route::get('/deleteCrop/{id}', [CropController::class, 'destroy'])->name('deleteCrop');
+
 
 
 

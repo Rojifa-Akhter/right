@@ -46,21 +46,23 @@ class WaterController extends Controller
     }
 
 
-    public function edit_waterSource(Request $request, $id)
+    public function edit_water(Request $request, $id)
     {
-        $waterSource_info = WaterSource::findOrFail($id);
+        $water_info = Water::findOrFail($id);
         return view('water.edit', compact('water_info'));
     }
     public function update(Request $request)
     {
         $id = $request->id;
-        $water_info = WaterSource::findOrFail($id);
+        $water_info = Water::findOrFail($id);
 
-        $water_info->name = $request->name;
+        $water_info->source_name = $request->source_name;
         $water_info->capacity = $request->capacity;
+        $water_info->quantity = $request->quantity;
+        $water_info->date = $request->date;
    
         $water_info->save();
-        return redirect()->route('waterSource_list');
+        return redirect()->route('water_list');
     }
     public function destroy($id)
     {
