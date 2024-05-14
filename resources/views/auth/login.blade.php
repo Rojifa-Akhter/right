@@ -2,9 +2,11 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
+            {{-- <img src="assets/images/resources/logo-1.png" --}}
+            
         </x-slot>
 
-        <x-jet-validation-errors class="mb-4" />
+        <x-jet-validation-errors class="mb-4 " />
 
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">

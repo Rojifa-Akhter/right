@@ -48,9 +48,6 @@ class CreateChat extends Component
         dd($createdMessage);
         dd('saved');
 
-
-
-
         } else if (count($checkedConversation) >= 1) {
 
             dd(

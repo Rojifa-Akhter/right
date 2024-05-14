@@ -8,6 +8,7 @@ use App\Models\Water;
 use App\Models\Season;
 use App\Models\Location;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CropController extends Controller
 {
@@ -28,7 +29,7 @@ class CropController extends Controller
         $soils = Soil::all();
         $waters = Water::all();
         $seasons = Season::all();
-        return view('crop.add', compact('locations','soils', 'waters', 'seasons'));
+        return view('crop.add', compact('locations', 'soils', 'waters', 'seasons'));
     }
 
     public function store(Request $request)
@@ -98,4 +99,32 @@ class CropController extends Controller
             return redirect()->route('crop_list')->with('error', 'crop to delete ');
         }
     }
+
+    // recommendCrop
+    // public function recommendCropView()
+    // {
+    //     $crop = Crop::all();
+    //     return view('crop.recommendCrop');
+    // }
+
+    public function recommend(Request $request)
+    {
+        // Validate incoming request
+        $request->validate([
+            'location_id' => 'required|exists:locations,id',
+            'season_id' => 'required|exists:seasons,id',
+            'soil_id' => 'required|exists:soils,id',
+        ]);
+    
+        // Fetch recommended crops based on selected location, season, and soil
+        $crops = Crop::where('location_id', $request->location_id)
+                     ->where('season_id', $request->season_id)
+                     ->where('soil_id', $request->soil_id)
+                     ->get();
+    
+        // Return JSON response with recommended crops
+        return response()->json(['crops' => $crops]);
+    }
+    
+
 }

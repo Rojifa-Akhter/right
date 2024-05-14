@@ -173,9 +173,8 @@ Route::post('/updateCrop', [CropController::class, 'update'])->name('updateCrop'
 Route::get('/deleteCrop/{id}', [CropController::class, 'destroy'])->name('deleteCrop');
 
 
-
-
-
+//recommendCrop
+Route::get( '/recommendCrop', [CropController::class, 'recommend'])->name('recommendCrop');
 
 
 

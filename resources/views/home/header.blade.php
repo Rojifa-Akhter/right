@@ -20,9 +20,9 @@
                                               <a href="{{ url('about') }}">About</a>
                                           </li>
                                           <li class="dropdown">
-                                              <a href="#">Services</a>
+                                              <a>Services</a>
                                               <ul class="shadow-box">
-                                                  <li><a href="">Services</a>
+                                                  <li><a href="{{ url('recommendCrop') }}">Services</a>
                                                   </li>
                                                   
                                                   <li><a href="{{ url('weather') }}">Weather Information</a></li>

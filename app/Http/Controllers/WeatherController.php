@@ -22,11 +22,11 @@ class WeatherController extends Controller
             $cityName = $request->city;
 
            $response = Http::withHeaders([
-                "X-RapidAPI-Host" =>"open-weather13.p.rapidapi.com",
-                "X-RapidAPI-Key" =>"56578b843amsh28b343a3f1ffd68p1d11acjsnb6a0a0d32ccc"
-            ])->get("https://open-weather13.p.rapidapi.com/city/{$cityName}");
+                "X-RapidAPI-Host" =>"weatherapi-com.p.rapidapi.com",
+                "X-RapidAPI-Key" =>"2c754b693cmsh1451cae70ccc74ap181ca4jsnfd1d35469c36"
+            ])->get("https://weatherapi-com.p.rapidapi.com/city/{$cityName}");
             // echo "<pre>";
-
+            // https://weatherapi-com.p.rapidapi.com/current.json weatherapi-com.p.rapidapi.com
             // print_r($response->json());
             $weatherResponse = $response->json();
         }

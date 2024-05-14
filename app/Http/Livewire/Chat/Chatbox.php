@@ -23,10 +23,8 @@ class Chatbox extends Component
 
     // protected $listeners = [ 'loadConversation', 'pushMessage', 'loadmore', 'updateHeight', "echo-private:chat. {$auth_id},MessageSent"=>'broadcastedMessageReceived',];
 
-
     public function  getListeners()
     {
-
         $auth_id = auth()->user()->id;
         return [
             "echo-private:chat.{$auth_id},MessageSent" => 'broadcastedMessageReceived',
@@ -34,16 +32,10 @@ class Chatbox extends Component
             'loadConversation', 'pushMessage', 'loadmore', 'updateHeight', 'broadcastMessageRead', 'resetComponent'
         ];
     }
-
-
-
-    public function resetComponent()
+   public function resetComponent()
     {
-
         $this->selectedConversation = null;
         $this->receiverInstance = null;
-
-        # code...
     }
 
     public function broadcastedMessageRead($event)
@@ -52,15 +44,11 @@ class Chatbox extends Component
 
         if ($this->selectedConversation) {
 
-
-
             if ((int) $this->selectedConversation->id === (int) $event['conversation_id']) {
 
                 $this->dispatchBrowserEvent('markMessageAsRead');
             }
         }
-
-        # code...
     }
 
     /*-----------------------------Broadcasted Event fucntion-------------------------------------------*/
@@ -92,7 +80,6 @@ class Chatbox extends Component
     public function broadcastMessageRead()
     {
         broadcast(new MessageRead($this->selectedConversation->id, $this->receiverInstance->id));
-        # code...
     }
 
     /*------------------push message to chat--------------*/ 
@@ -107,7 +94,6 @@ class Chatbox extends Component
     /*------------------load More --------------------*/
     function loadmore()
     {
-
         // dd('top reached ');
         $this->paginateVar = $this->paginateVar + 10;
         $this->messages_count = Message::where('conversation_id', $this->selectedConversation->id)->count();
@@ -118,7 +104,6 @@ class Chatbox extends Component
 
         $height = $this->height;
         $this->dispatchBrowserEvent('updatedHeight', ($height));
-        # code...
     }
 
     /*------------------Update height of messageBody-----------------------*/
@@ -129,17 +114,12 @@ class Chatbox extends Component
         $this->height = $height;
 
     }
-
-
     /*------------------load conersation----------------------------------*/
     public function loadConversation(Conversation $conversation, User $receiver)
     {
-
-
         //  dd($conversation,$receiver);
         $this->selectedConversation =  $conversation;
         $this->receiverInstance =  $receiver;
-
 
         $this->messages_count = Message::where('conversation_id', $this->selectedConversation->id)->count();
 

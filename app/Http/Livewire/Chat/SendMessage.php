@@ -24,22 +24,15 @@ class SendMessage extends Component
         $this->selectedConversation = null;
         $this->receiverInstance = null;
 
-        # code...
     }
-
-
-
     function updateSendMessage(Conversation $conversation, User $receiver)
     {
 
         //  dd($conversation,$receiver);
         $this->selectedConversation = $conversation;
         $this->receiverInstance = $receiver;
-        # code...
+
     }
-
-
-
 
     public function sendMessage()
     {
@@ -66,7 +59,6 @@ class SendMessage extends Component
 
         $this->emitSelf('dispatchMessageSent');
         // dd($this->body);
-        # code..
     }
 
 
@@ -75,7 +67,6 @@ class SendMessage extends Component
     {
 
         broadcast(new MessageSent(Auth()->user(), $this->createdMessage, $this->selectedConversation, $this->receiverInstance));
-        # code...
     }
     public function render()
     {

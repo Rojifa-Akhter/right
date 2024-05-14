@@ -42,9 +42,11 @@
                     style="width:80%;max-width:80%;max-width:max-content">
 
                     {{ $message->body }}
+                    {{-- 'H:i' --}}
                     <div class="msg_body_footer">
                         <div class="date">
-                            {{ $message->created_at->format('m: i a') }}
+                            
+                            {{ $message->created_at->format('g:i a') }}
                         </div>
 
                         <div class="read">

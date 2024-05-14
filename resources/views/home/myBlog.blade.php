@@ -24,7 +24,7 @@
         }
 
         .table th {
-            background-color: #f2f2f2;
+            background-color:#292020;
         }
 
         .table img {
@@ -32,24 +32,12 @@
             height: auto;
         }
 
-        .btn-danger {
-            background-color: #dc3545;
-            color: #230707;
-            border: none;
-            padding: 8px 16px; /* Adjust padding for a larger button */
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn-danger:hover {
-            background-color: #c82333;
-        }
+       
 
         h1 {
             font-size: 80px; /* Increase font size for h1 */
             margin-bottom: 30px; /* Add some bottom margin */
-            color: #333; /* Change text color */
+            color: #230c0c; /* Change text color */
             text-align: center; /* Center align the heading */
             text-transform: uppercase; /* Convert text to uppercase */
         }
@@ -104,11 +92,11 @@
                                 <td>{{ $mblog->usertype }}</td>
                                 <td><img src="/postimage/{{ $mblog->image }}" alt=""></td>
                                 <td>
-                                    <a href="{{url('/edit_myBlog',$mblog->id)}}"><button type="button" class="btn btn-primary">Edit</button></a>
+                                    <a href="{{url('/edit_myBlog',$mblog->id)}}"><button type="button" class="btn btn-primary" style="background-color:rgb(3, 36, 36);">Edit</button></a>
 
                                     <a href="{{ url('/delete_myBlog', $mblog->id) }}"
                                         onclick="return confirm('Are you sure you want to delete this?')">
-                                        <button type="button" class="btn btn-danger">Delete</button>
+                                        <button type="button" class="btn btn-danger" style="background: red;">Delete</button>
                                     </a>
                                 </td>
                             </tr>
