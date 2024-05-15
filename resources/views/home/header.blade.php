@@ -84,7 +84,7 @@
                                           <a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
                                       </div> --}}
                                       <div class="main-menu__btn-box">
-                                          <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
+                                          <a class="thm-btn main-menu__btn">Get Free Quote
                                               <i class="icon-right-arrow"></i> </a>
                                       </div>
                                   </div>

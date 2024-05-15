@@ -46,15 +46,7 @@
                             <div class="team-one__img-box">
                                 <div class="team-one__img">
                                     <img src="expertimage/{{ $expert->image }}" alt="">
-                                    <ul class="list-unstyled team-one__social">
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i> <span class="team-one__social-name">Facebook</span></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i> <span class="team-one__social-name">Twitter</span></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i> <span class="team-one__social-name">Pinterest</span></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i><span class="team-one__social-name">Instagram</span></a></li>
-                                    </ul>
-                                    <div class="team-one__icon">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                                    </div>
+                                   
                                 </div>
                             </div>
                             <div class="team-one__content">

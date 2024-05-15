@@ -101,10 +101,10 @@
                   <div class="site-footer__bottom-inner">
                       <p class="site-footer__bottom-text">© Copyright 2024 by <a href="#">Farmer Buddy.com</a></p>
                       <div class="site-footer__social">
-                          <a href="#"><i class="fab fa-twitter"></i></a>
-                          <a href="#"><i class="fab fa-facebook"></i></a>
-                          <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="/"><i class="fab fa-twitter"></i></a>
+                          <a href=" "><i class="fab fa-facebook"></i></a>
+                          <a href=" "><i class="fab fa-pinterest-p"></i></a>
+                          <a href=" "><i class="fab fa-instagram"></i></a>
                       </div>
                       <div class="site-footer__bottom-scroll">
                           <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i

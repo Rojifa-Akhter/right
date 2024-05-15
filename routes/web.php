@@ -86,12 +86,12 @@ Route::get('/about', [AboutController::class, 'index'])->name('home.about');
 
 //contact
 Route::get('/contact', [HomeController::class, 'contact']);
-Route::post('/addContact', [HomeController::class, 'addContact']);
+Route::post('/addContact', [HomeController::class, 'addContact'])->middleware('auth');
 
 //expert home as user
 Route::get('/expert', [HomeController::class, 'index'])->name('home.expert');
 Route::get('/expertDetails/{id}',[HomeController::class,'expertDetails']);
-Route::post('/addBooking/{id}',[HomeController::class,'addBooking']);
+Route::post('/addBooking/{id}',[HomeController::class,'addBooking'])->middleware('auth');
 
 //blog for user
 Route::get('/blog', [HomeController::class, 'blog']);
