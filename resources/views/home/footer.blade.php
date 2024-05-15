@@ -25,7 +25,7 @@
                           <ul class="footer-widget__Explore-list list-unstyled">
                               <li><a href="about.html">About</a></li>
                               <li><a href="{{ url('expert') }}">Our Experts</a></li>
-                              <li><a href="services.html">Services</a></li>
+                              <li><a href="/">Services</a></li>
                               <li><a href="{{ url('contact') }}">Contact</a></li>
                           </ul>
                       </div>

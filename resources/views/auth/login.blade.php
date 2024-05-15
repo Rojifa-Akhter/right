@@ -1,11 +1,11 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-            {{-- <img src="assets/images/resources/logo-1.png" --}}
-            
+            <!-- Use the same logo as in the header -->
+            <a href="{{ url('/') }}"><img src="assets/images/resources/logo-1.png" alt=""></a>
         </x-slot>
 
+        <!-- Authentication form content -->
         <x-jet-validation-errors class="mb-4 " />
 
         @if (session('status'))
